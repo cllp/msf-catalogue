@@ -1,5 +1,6 @@
 namespace MSF.Catalogue.Models
 {
+    using System;
     //using Dapper;
     public class Product : BaseEntity
     {
@@ -8,5 +9,7 @@ namespace MSF.Catalogue.Models
  
         //[Required]
         public string Name { get; set; }
+
+        public DateTime Created { get; set; }
     }
 }

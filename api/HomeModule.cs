@@ -1,6 +1,7 @@
 namespace MSF.Catalogue
 {
     using Nancy;
+    using System;
     using Nancy.ModelBinding;
     using MSF.Catalogue.Repository;
     using MSF.Catalogue.Models;
@@ -20,23 +21,11 @@ namespace MSF.Catalogue
 
             Post("/add", args =>
             {
-                var model = this.Bind<Product>();
-                //var model = new Product() { Id = args.id, Name = args.name };
-
-                //rep.Add(new Product() {Id = args.id, Name = args.name});
-                
-                rep.Add(model);
-                //return model;//this.Response.AsRedirect("/"); //return model;
-                return rep.FindAll();
+                var model = this.Bind<Product>();                
+                model.Created = DateTime.Now;                                
+                int id = rep.Add(model);
+                return rep.FindByID(id);
             });
-
-
-            /*Post["/add"] = x =>
-            {
-                rep.Add(new Product() {Id = args.id, Name = args.name});
-                return args;
-            };
-            */
         }
     }
 }

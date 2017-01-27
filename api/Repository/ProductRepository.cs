@@ -27,12 +27,21 @@ namespace MSF.Catalogue.Repository
             }
         }
  
-        public void Add(Product item)
+        public int Add(Product item)
         {
             using (IDbConnection dbConnection = Connection)
             {
+                
+                string sql = @"
+                INSERT INTO Product (name, created) VALUES(@Name, @created);
+                SELECT max(id) from Product";
+
                 dbConnection.Open();
-                dbConnection.Execute("INSERT INTO Product (name) VALUES(@Name)", item);
+                return dbConnection.Query<int>(sql, item).Single();
+
+                //dbConnection.Open();
+                //return dbConnection.Execute("INSERT INTO Product (name, created) VALUES(@Name, @created)", item);
+
             }
  
         }
