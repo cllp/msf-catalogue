@@ -5,13 +5,19 @@ using Dapper;
 using System.Data;
 using Npgsql;
 using MSF.Catalogue.Models;
+using System.Data.SqlClient;
  
 namespace MSF.Catalogue.Repository
 {
     public class ProductRepository : IRepository<Product>
     {
-        private string connectionString = "User ID=postgres;Password=lillHH77;Host=localhost;Port=5432;Database=test;Pooling=true;";
-        //public ProductRepository(IConfiguration configuration)
+        //postgres
+        //private string connectionString = "User ID=postgres;Password=lillHH77;Host=localhost;Port=5432;Database=test;Pooling=true;";
+        
+        //SQL Server 
+        private string connectionString = "Server=mssql03.citynetwork.se;Database=102482-actionframework;User Id=102482-cm38669;Password=lillHH77;";
+    
+    
 
         public ProductRepository()
         {
@@ -23,7 +29,8 @@ namespace MSF.Catalogue.Repository
         {
             get
             {
-                return new NpgsqlConnection(connectionString);
+                return new SqlConnection(connectionString);
+                //return new NpgsqlConnection(connectionString);
             }
         }
  
@@ -35,6 +42,10 @@ namespace MSF.Catalogue.Repository
                 string sql = @"
                 INSERT INTO Product (name, created) VALUES(@Name, @created);
                 SELECT max(id) from Product";
+
+                /*string sql = @"
+                INSERT INTO Product (name, created) VALUES(@Name, @created);
+                SELECT SCOPE_IDENTITY()";*/
 
                 dbConnection.Open();
                 return dbConnection.Query<int>(sql, item).Single();
