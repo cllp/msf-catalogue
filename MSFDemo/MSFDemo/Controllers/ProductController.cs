@@ -46,7 +46,7 @@ namespace MSFDemo.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]Product prod)
         {
-            prod.ID = id;
+            prod.ProductId = id;
             if (ModelState.IsValid)
                 productRepository.Update(prod);
         }

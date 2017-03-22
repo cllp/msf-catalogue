@@ -9,12 +9,12 @@ namespace MSFDemo.Models
     public class Product
     {
         [Key]
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public int Quantity { get; set; }
+        public int ProductId { get; set; }
         public double ProductTypeId { get; set; }
-        public DateTime dt{get; set;}
+        public int SupplierId { get; set; }
+        public string ProductName { get; set; }
+        public DateTime DateCreated{get; set;}
         public bool bActive { get; set; }
-        public Guid rowGUID { get; set; }
+        
     }
 }
