@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSF.LogisticsPlatform.API", "MSF.LogisticsPlatform.API\MSF.LogisticsPlatform.API.csproj", "{B285A287-3FF5-483B-9A29-424338EE88D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSF.LogisticsPlatform.Domain", "MSF.LogisticsPlatform.Domain\MSF.LogisticsPlatform.Domain.csproj", "{2629DBA9-1FC8-41C8-B3AD-E76B6F98B4B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B285A287-3FF5-483B-9A29-424338EE88D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B285A287-3FF5-483B-9A29-424338EE88D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B285A287-3FF5-483B-9A29-424338EE88D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2629DBA9-1FC8-41C8-B3AD-E76B6F98B4B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2629DBA9-1FC8-41C8-B3AD-E76B6F98B4B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2629DBA9-1FC8-41C8-B3AD-E76B6F98B4B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2629DBA9-1FC8-41C8-B3AD-E76B6F98B4B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
