@@ -15,5 +15,8 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.0" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MSF.LogisticsPlatform.Domain\MSF.LogisticsPlatform.Domain.csproj" />
+  </ItemGroup>
 
 </Project>
