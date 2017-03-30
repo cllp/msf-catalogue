@@ -15,7 +15,7 @@ namespace MSF.LogisticsPlatform.Domain.Infrastructure
         {
             //Chen's connectionString
             connectionString = "Data Source=DESKTOP-O942SQF\\SQLEXPRESS;Initial Catalog=MIC_Data;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            //connectionString ="your connection string from SQL Server Objcect Explorer inside Visual Studiio";
+            //connectionString ="your connection string from SQL Server Objcect Explorer inside Visual Studio";
         }
 
         public IDbConnection connection

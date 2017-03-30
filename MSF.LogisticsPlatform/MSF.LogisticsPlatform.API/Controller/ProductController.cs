@@ -19,13 +19,6 @@ namespace MSF.LogisticsPlatform.API.Controller
             _productRepository = productRepository;
         }
 
-        //[HttpGet]
-        //public IEnumerable<Product> Get()
-        //{
-        //    return _productRepository.GetAll();
-        //}
-
-        
         public async Task<IActionResult> Get()
         {
             //IHttpActionResult
@@ -37,13 +30,32 @@ namespace MSF.LogisticsPlatform.API.Controller
             return Ok(resultData);
         }
 
+
+        //[HttpGet]
+        //public IEnumerable<Product> Get()
+        //{
+        //    return _productRepository.GetAll();
+        //}
+
+
+        /*public async Task<IActionResult> Get()
+        {
+            //IHttpActionResult
+            var resultData = await _productRepository.GetAll();
+            if (resultData == null)
+            {
+                return NotFound();
+            }
+            return Ok(resultData);
+        }*/
+
         //public IActionResult Get()
         //{ return Ok("OK"); }
 
         //[HttpGet "(id)"]
         //public IActionResult GetId(int id)
         //{
-           // return Ok(_productRepository.Products.Product_id);
+        // return Ok(_productRepository.Products.Product_id);
         //}
     }
 }

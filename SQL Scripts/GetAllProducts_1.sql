@@ -1,0 +1,1 @@
+SELECT ProductId, ProductName, ProductFile FROM ProductFiles INNER JOIN Product ON Product.ProductId = ProductFiles.ProductId

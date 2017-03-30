@@ -6,6 +6,7 @@ namespace MSF.LogisticsPlatform.Domain.Repository
 {
     public interface IProductRepository
     {
-        Task<IEnumerable<Product>> GetAll();
+        //Task<IEnumerable<Product>> GetAll();
+        Task<IEnumerable<ProductFiles>> GetAll();
     }
 }

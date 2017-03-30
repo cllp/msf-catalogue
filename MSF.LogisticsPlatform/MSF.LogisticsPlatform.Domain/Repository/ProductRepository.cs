@@ -15,26 +15,18 @@ namespace MSF.LogisticsPlatform.Domain.Repository
         public ProductRepository(IDBConnectionFactory dbconnectionFactory)
         {
             _dbConnectionFactory = dbconnectionFactory;
-        }       
+        }        
 
-        /*public IEnumerable<Product> GetAll()
+        public async Task<IEnumerable<ProductFiles>> GetAll()
         {
+            //var sql = @"SELECT ProductFile, Product.ProductId, ProductName FROM ProductFiles INNER JOIN Product ON ProductFiles.ProductId = Product.ProductId";
+            var sql = @"SELECT ProductFiles.ProductFile, ProductFiles.ProductId, Product.ProductId, Product.ProductName FROM ProductFiles INNER JOIN Product ON Product.ProductId =ProductFiles.ProductId WHERE ProductFiles.FileExtention='jpg'";
             using (IDbConnection conn = _dbConnectionFactory.connection)
             {
                 conn.Open();
-                return conn.Query<Product>("Select * from Product");
+                return await conn.QueryAsync<ProductFiles, Product, ProductFiles>(sql,
+                    (productfile, product) => { productfile.Product = product; return productfile; }, commandType: CommandType.Text, splitOn: "ProductId");                
             }
-        }*/
-
-        public async Task<IEnumerable<Product>> GetAll()
-        {
-            using (IDbConnection conn = _dbConnectionFactory.connection)
-            {
-                conn.Open();
-                return await conn.QueryAsync<Product>("Select * from Product");
-                //return await conn.QueryAsync<ProdFileView>("SELECT Pr.ProductName, Pf.ProductFile FROM Product AS Pr, ProductFiles AS Pf WHERE Pr.ProductId = Pf.ProductFile");
-            }
-        }
-
-   }
+        }     
+    }
 }
