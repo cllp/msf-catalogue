@@ -1,0 +1,33 @@
+c:\users\administrator\documents\visual studio 2017\Projects\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.deps.json
+c:\users\administrator\documents\visual studio 2017\Projects\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.runtimeconfig.json
+c:\users\administrator\documents\visual studio 2017\Projects\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.runtimeconfig.dev.json
+c:\users\administrator\documents\visual studio 2017\Projects\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.csprojResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2017\Projects\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.AssemblyInfo.cs
+c:\users\administrator\documents\visual studio 2017\Projects\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.dll
+c:\users\administrator\documents\visual studio 2017\Projects\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.pdb
+c:\users\administrator\documents\visual studio 2017\Projects\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.dll
+c:\users\administrator\documents\visual studio 2017\Projects\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.pdb
+c:\users\administrator\documents\visual studio 2017\Projects\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.dll
+c:\users\administrator\documents\visual studio 2017\Projects\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.pdb
+E:\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.deps.json
+E:\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.runtimeconfig.json
+E:\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.runtimeconfig.dev.json
+E:\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.dll
+E:\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.pdb
+E:\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.dll
+E:\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.pdb
+E:\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.csprojResolveAssemblyReference.cache
+E:\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.AssemblyInfo.cs
+E:\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.dll
+E:\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.pdb
+C:\dev1\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.deps.json
+C:\dev1\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.runtimeconfig.json
+C:\dev1\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.runtimeconfig.dev.json
+C:\dev1\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.dll
+C:\dev1\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.pdb
+C:\dev1\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.dll
+C:\dev1\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.pdb
+C:\dev1\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.csprojResolveAssemblyReference.cache
+C:\dev1\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.AssemblyInfo.cs
+C:\dev1\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.dll
+C:\dev1\MSF.LogisticsPlatform\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.pdb
