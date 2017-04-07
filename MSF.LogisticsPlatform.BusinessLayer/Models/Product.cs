@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MSF.LogisticsPlatform.API.Models
+namespace MSF.LogisticsPlatform.BusinessLayer.Models
 {
     public class Product
     {

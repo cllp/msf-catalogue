@@ -4,9 +4,9 @@ using System.Text;
 using MSF.LogisticsPlatform.Domain.Entities;
 using MSF.LogisticsPlatform.Domain.Repositories;
 using System.IO;
-using MSF.LogisticsPlatform.Domain.UnitOfWorks;
+using MSF.LogisticsPlatform.BusinessLayer.UnitOfWorks;
 
-namespace MSF.LogisticsPlatform.Domain.Services
+namespace MSF.LogisticsPlatform.BusinessLayer.Services
 {
     public class ProductService : IProductService
     {

@@ -4164,6 +4164,14 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "MSF.LogisticsPlatform.BusinessLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.1",
+        "dependencies": {
+          "MSF.LogisticsPlatform.Domain": "1.0.0",
+          "Microsoft.NETCore.App": "1.1.1"
+        }
+      },
       "MSF.LogisticsPlatform.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v1.1",
@@ -4176,7 +4184,7 @@
   },
   "libraries": {
     "Dapper/1.50.2": {
-      "sha512": "PhxIV8TI/5aYdLT4epuIZB+Evf0sv9gcQDpFGa04fSKDfNQIChRq0sKUgQbfpFWbuDW/UDDuiL3Grkhp/cvYrA==",
+      "sha512": "31Ju5VGyNNc66OAsw+SCp1TWPBuyw8ZBdkMG5pSUPChZcy27s2GhVz5B9INP4f25mPqfiJ+mfeHy9JAJyyT+LQ==",
       "type": "package",
       "path": "dapper/1.50.2",
       "files": [
@@ -10793,6 +10801,11 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
+    "MSF.LogisticsPlatform.BusinessLayer/1.0.0": {
+      "type": "project",
+      "path": "../MSF.LogisticsPlatform.BusinessLayer/MSF.LogisticsPlatform.BusinessLayer.csproj",
+      "msbuildProject": "../MSF.LogisticsPlatform.BusinessLayer/MSF.LogisticsPlatform.BusinessLayer.csproj"
+    },
     "MSF.LogisticsPlatform.Domain/1.0.0": {
       "type": "project",
       "path": "../MSF.LogisticsPlatform.Domain/MSF.LogisticsPlatform.Domain.csproj",
@@ -10802,7 +10815,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
       "Dapper >= 1.50.2",
-      "MSF.LogisticsPlatform.Domain >= 1.0.0",
+      "MSF.LogisticsPlatform.BusinessLayer >= 1.0.0",
       "Microsoft.ApplicationInsights.AspNetCore >= 2.0.0",
       "Microsoft.AspNetCore >= 1.1.1",
       "Microsoft.AspNetCore.Mvc >= 1.1.2",
@@ -10817,15 +10830,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Salle\\.nuget\\packages\\": {}
+    "C:\\Users\\talent2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev1\\MSF.LogisticsPlatform\\MSF.LogisticsPlatform.API\\MSF.LogisticsPlatform.API.csproj",
+      "projectUniqueName": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.API\\MSF.LogisticsPlatform.API.csproj",
       "projectName": "MSF.LogisticsPlatform.API",
-      "projectPath": "C:\\dev1\\MSF.LogisticsPlatform\\MSF.LogisticsPlatform.API\\MSF.LogisticsPlatform.API.csproj",
-      "outputPath": "C:\\dev1\\MSF.LogisticsPlatform\\MSF.LogisticsPlatform.API\\obj\\",
+      "projectPath": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.API\\MSF.LogisticsPlatform.API.csproj",
+      "outputPath": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.API\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
@@ -10833,8 +10846,8 @@
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "C:\\dev1\\MSF.LogisticsPlatform\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj": {
-              "projectPath": "C:\\dev1\\MSF.LogisticsPlatform\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj"
+            "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\MSF.LogisticsPlatform.BusinessLayer.csproj": {
+              "projectPath": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\MSF.LogisticsPlatform.BusinessLayer.csproj"
             }
           }
         }

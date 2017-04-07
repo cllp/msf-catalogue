@@ -21,7 +21,7 @@ namespace MSF.LogisticsPlatform.Domain.Repositories
             using (IDbConnection dbConnection = Conn.Connection)
             {
                 dbConnection.Open();
-                List<Product> productList = SqlMapper.Query<Product>(dbConnection, "SELECT * FROM Product", CommandType.Text).ToList();
+                List<Product> productList = SqlMapper.Query<Product>(dbConnection, "SELECT * FROM P.Product", CommandType.Text).ToList();
                 return productList;
                 
             }
@@ -41,8 +41,8 @@ namespace MSF.LogisticsPlatform.Domain.Repositories
             
             //Query for mapping two tables Products and Supplier
             var sql = @"
-            select * from Product where ProductID = @id
-            select * from Supplier where SupplierId = @id";
+            select * from P.Product where ProductID = @id
+            select * from P.Supplier where SupplierId = @id";
 
             using (var multi = Conn.Connection.QueryMultiple(sql, new { id = id }))
             {

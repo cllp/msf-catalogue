@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MSF.LogisticsPlatform.Domain.UnitOfWorks
+namespace MSF.LogisticsPlatform.BusinessLayer.UnitOfWorks
 {
     public class UnitOfWork: IUnitOfWork, IDisposable
     {

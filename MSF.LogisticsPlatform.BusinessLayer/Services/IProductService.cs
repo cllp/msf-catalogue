@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MSF.LogisticsPlatform.Domain.Services
+namespace MSF.LogisticsPlatform.BusinessLayer.Services
 {
     public interface IProductService
     {

@@ -17,3 +17,10 @@ C:\dev1\MSF.LogisticsPlatform\MSF.LogisticsPlatform.Domain\bin\Debug\netcoreapp1
 C:\dev1\MSF.LogisticsPlatform\MSF.LogisticsPlatform.Domain\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.AssemblyInfo.cs
 C:\dev1\MSF.LogisticsPlatform\MSF.LogisticsPlatform.Domain\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.dll
 C:\dev1\MSF.LogisticsPlatform\MSF.LogisticsPlatform.Domain\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.pdb
+C:\Dev\msf-catalogue\MSF.LogisticsPlatform.Domain\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.deps.json
+C:\Dev\msf-catalogue\MSF.LogisticsPlatform.Domain\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.dll
+C:\Dev\msf-catalogue\MSF.LogisticsPlatform.Domain\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.pdb
+C:\Dev\msf-catalogue\MSF.LogisticsPlatform.Domain\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.csprojResolveAssemblyReference.cache
+C:\Dev\msf-catalogue\MSF.LogisticsPlatform.Domain\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.AssemblyInfo.cs
+C:\Dev\msf-catalogue\MSF.LogisticsPlatform.Domain\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.dll
+C:\Dev\msf-catalogue\MSF.LogisticsPlatform.Domain\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.pdb

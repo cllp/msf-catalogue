@@ -24,7 +24,7 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MSF.LogisticsPlatform.Domain\MSF.LogisticsPlatform.Domain.csproj" />
+    <ProjectReference Include="..\MSF.LogisticsPlatform.BusinessLayer\MSF.LogisticsPlatform.BusinessLayer.csproj" />
   </ItemGroup>
 
 </Project>
