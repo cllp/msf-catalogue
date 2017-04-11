@@ -1,30 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using MSF.LogisticsPlatform.Domain.Entities;
-using MSF.LogisticsPlatform.Domain.Repositories;
 using System.IO;
-using MSF.LogisticsPlatform.BusinessLayer.UnitOfWorks;
+using MSF.LogisticsPlatform.Domain.Infrastucture;
+using MSF.LogisticsPlatform.BusinessLayer.Models;
+using MSF.LogisticsPlatform.Domain.Infrastucture.Data;
 
 namespace MSF.LogisticsPlatform.BusinessLayer.Services
 {
     public class ProductService : IProductService
     {
-        IUnitOfWork _unitOfWork;
-        public ProductService(IUnitOfWork unitOfWork)
+        private readonly IDBConnectionFactory _dbConnectionFactory;
+        public ProductService(IDBConnectionFactory dbConnectionFactory)
         {
-            _unitOfWork = unitOfWork;
+            _dbConnectionFactory = dbConnectionFactory;
+
         }
         public IEnumerable<Product> GetAll()
         {
-            return _unitOfWork.ProductRepository.GetAll();
+            using (var dbConnection = _dbConnectionFactory.Connection)
+            {
+                dbConnection.Open();
+                var unitOfWorkProduct = new UnitOfWorkProduct(dbConnection);
+                var productCollection = new List<Product>();
+                var productEntities = unitOfWorkProduct.GetProductProcedures().GetFilteredProducts(new ProductFilter());
+
+                // Use automapper to map entity to model
+
+                return unitOfWorkProduct.GetProductRepository.GetAll();
+            }
+
         }
 
         public Product Get(int id)
         {
-            return _unitOfWork.ProductRepository.Get(id);
+            throw new NotImplementedException();
         }
-        
+
         /*public MemoryStream GetProductPhoto(int productPhotoID)
         {
             return _unitOfWork.ProductRepository.GetProductPhoto(productPhotoID);
@@ -38,9 +50,21 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
          {
              return _unitOfWork.ProductRepository.GetProductInformation();
          }*/
-        public void Add(Product prod)
+
+
+        IEnumerable<Product> IProductService.GetAll()
         {
-            _unitOfWork.ProductRepository.Add(prod);
+            throw new NotImplementedException();
+        }
+
+        Product IProductService.Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Add(Product product)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MSF.LogisticsPlatform.Domain.Services;
 using MSF.LogisticsPlatform.Domain.Entities;
+using MSF.LogisticsPlatform.BusinessLayer.Services;
 
 namespace MSF.LogisticsPlatform.API.Controllers
 {

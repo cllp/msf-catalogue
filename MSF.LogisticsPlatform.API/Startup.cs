@@ -8,8 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using MSF.LogisticsPlatform.Domain.Repositories;
-using MSF.LogisticsPlatform.Domain.Services;
-using MSF.LogisticsPlatform.Domain.UnitOfWorks;
+using MSF.LogisticsPlatform.BusinessLayer.Services;
+using MSF.LogisticsPlatform.BusinessLayer.UnitOfWorks;
 
 namespace MSF.LogisticsPlatform.API
 {

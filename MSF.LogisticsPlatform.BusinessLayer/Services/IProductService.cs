@@ -1,4 +1,4 @@
-﻿using MSF.LogisticsPlatform.Domain.Entities;
+﻿using MSF.LogisticsPlatform.BusinessLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,6 +12,6 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
         void Add(Product prod);
         //MemoryStream GetProductThumbnail(int productPhotoID);
         //MemoryStream GetProductPhoto(int productPhotoID);
-        
+
     }
 }
