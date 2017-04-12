@@ -1,22 +1,32 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "4eabd3e092c54686e8b8d78b718ee6d1cc0873a2"
+    "signature": "9b5ae790e256e5bef22c6cf809d79dae150bfbd5"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v1.1": {
       "msf.logisticsplatform.businesslayer/1.0.0": {
         "dependencies": {
+          "AutoMapper": "6.0.2",
           "MSF.LogisticsPlatform.Domain": "1.0.0"
         },
         "runtime": {
           "MSF.LogisticsPlatform.BusinessLayer.dll": {}
         }
       },
+      "automapper/6.0.2": {
+        "dependencies": {
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/AutoMapper.dll": {}
+        }
+      },
       "dapper/1.50.2": {
         "dependencies": {
-          "System.Collections.NonGeneric": "4.0.1",
+          "System.Collections.NonGeneric": "4.3.0",
           "System.Data.SqlClient": "4.1.0"
         },
         "runtime": {
@@ -45,9 +55,32 @@
           }
         }
       },
-      "system.collections.nongeneric/4.0.1": {
+      "system.collections.nongeneric/4.3.0": {
         "runtime": {
           "lib/netstandard1.3/System.Collections.NonGeneric.dll": {}
+        }
+      },
+      "system.collections.specialized/4.3.0": {
+        "dependencies": {
+          "System.Collections.NonGeneric": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Collections.Specialized.dll": {}
+        }
+      },
+      "system.componentmodel.primitives/4.3.0": {
+        "runtime": {
+          "lib/netstandard1.0/System.ComponentModel.Primitives.dll": {}
+        }
+      },
+      "system.componentmodel.typeconverter/4.3.0": {
+        "dependencies": {
+          "System.Collections.NonGeneric": "4.3.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel.Primitives": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll": {}
         }
       },
       "system.data.common/4.1.0": {
@@ -100,6 +133,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "automapper/6.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uI4uPyibgP4+2zn21fVqy0ep+eYeB5IcfjanyUESj+F0qcrOYpAW4iH2+xKET0vfhgJn4U1c4xN3stKUhygTmQ==",
+      "path": "automapper/6.0.2",
+      "hashPath": "automapper.6.0.2.nupkg.sha512"
+    },
     "dapper/1.50.2": {
       "type": "package",
       "serviceable": true,
@@ -128,12 +168,33 @@
       "path": "runtime.win7-x86.runtime.native.system.data.sqlclient.sni/4.0.1",
       "hashPath": "runtime.win7-x86.runtime.native.system.data.sqlclient.sni.4.0.1.nupkg.sha512"
     },
-    "system.collections.nongeneric/4.0.1": {
+    "system.collections.nongeneric/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hMxFT2RhhlffyCdKLDXjx8WEC5JfCvNozAZxCablAuFRH74SCV4AgzE8yJCh/73bFnEoZgJ9MJmkjQ0dJmnKqA==",
-      "path": "system.collections.nongeneric/4.0.1",
-      "hashPath": "system.collections.nongeneric.4.0.1.nupkg.sha512"
+      "sha512": "sha512-prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
+      "path": "system.collections.nongeneric/4.3.0",
+      "hashPath": "system.collections.nongeneric.4.3.0.nupkg.sha512"
+    },
+    "system.collections.specialized/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
+      "path": "system.collections.specialized/4.3.0",
+      "hashPath": "system.collections.specialized.4.3.0.nupkg.sha512"
+    },
+    "system.componentmodel.primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
+      "path": "system.componentmodel.primitives/4.3.0",
+      "hashPath": "system.componentmodel.primitives.4.3.0.nupkg.sha512"
+    },
+    "system.componentmodel.typeconverter/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
+      "path": "system.componentmodel.typeconverter/4.3.0",
+      "hashPath": "system.componentmodel.typeconverter.4.3.0.nupkg.sha512"
     },
     "system.data.common/4.1.0": {
       "type": "package",

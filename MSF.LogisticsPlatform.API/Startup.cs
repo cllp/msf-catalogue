@@ -7,9 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using MSF.LogisticsPlatform.Domain.Repositories;
 using MSF.LogisticsPlatform.BusinessLayer.Services;
-using MSF.LogisticsPlatform.BusinessLayer.UnitOfWorks;
+using MSF.LogisticsPlatform.BusinessLayer;
 
 namespace MSF.LogisticsPlatform.API
 {
@@ -32,11 +31,8 @@ namespace MSF.LogisticsPlatform.API
         {
             // Add framework services.
             services.AddMvc();
-            services.AddTransient<IProductRepository, ProductRepository>();
-            services.AddTransient<IProductService, ProductService>();
-            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<IServiceFactory, ServiceFactory>();
             //services.DependencyResolver = new UnityResolver(container);
-            services.AddTransient<IProductService, ProductService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

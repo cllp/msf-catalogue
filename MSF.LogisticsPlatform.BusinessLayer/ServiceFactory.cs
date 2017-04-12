@@ -2,21 +2,27 @@
 using System.Collections.Generic;
 using System.Text;
 using MSF.LogisticsPlatform.BusinessLayer.Services;
-using MSF.LogisticsPlatform.BusinessLayer.UnitOfWorks;
+using System.Data;
+using MSF.LogisticsPlatform.Domain.Infrastucture;
 
 namespace MSF.LogisticsPlatform.BusinessLayer
 {
     public class ServiceFactory : IServiceFactory
     {
-        private readonly IUnitOfWork _unitOfWork;
-        public ServiceFactory(IUnitOfWork unitOfWork)
+        private readonly IDBConnectionFactory _dbConnectionFactory;
+        public ServiceFactory()
         {
-            _unitOfWork = unitOfWork;
+            _dbConnectionFactory = new DBConnectionFactory();
         }
 
         public IProductService GetProductService()
         {
-            return new Services.ProductService(_unitOfWork);
+            return new ProductService(_dbConnectionFactory);
+        }
+
+        public IFilterService GetFilterService()
+        {
+            return new FilterService(_dbConnectionFactory);
         }
     }
 }

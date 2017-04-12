@@ -4,7 +4,8 @@ using System.Text;
 using System.IO;
 using MSF.LogisticsPlatform.Domain.Infrastucture;
 using MSF.LogisticsPlatform.BusinessLayer.Models;
-using MSF.LogisticsPlatform.Domain.Infrastucture.Data;
+using MSF.LogisticsPlatform.Domain.Database;
+using MSF.LogisticsPlatform.Domain.Database.Data;
 
 namespace MSF.LogisticsPlatform.BusinessLayer.Services
 {
@@ -21,13 +22,16 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
             using (var dbConnection = _dbConnectionFactory.Connection)
             {
                 dbConnection.Open();
-                var unitOfWorkProduct = new UnitOfWorkProduct(dbConnection);
+                var productProcedures = new ProductProcedures(dbConnection);
                 var productCollection = new List<Product>();
-                var productEntities = unitOfWorkProduct.GetProductProcedures().GetFilteredProducts(new ProductFilter());
+                var productEntities = productProcedures.GetFilteredProducts(new ShelterFilter());
 
                 // Use automapper to map entity to model
 
-                return unitOfWorkProduct.GetProductRepository.GetAll();
+                //
+                //return unitOfWorkProduct.GetProductRepository.GetAll();
+                throw new NotImplementedException();
+
             }
 
         }
@@ -53,6 +57,25 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
 
 
         IEnumerable<Product> IProductService.GetAll()
+        {
+            using (var dbConnection = _dbConnectionFactory.Connection)
+            {
+                if (dbConnection.State == System.Data.ConnectionState.Open)
+                    dbConnection.Close();
+
+                dbConnection.Open();
+
+                var productProcedures = new ProductProcedures(dbConnection);
+                var entities = productProcedures.GetAllProducts();
+                var models = new List<Models.Product>();
+
+                // map entities to models
+
+                return models;
+            }
+        }
+
+        IEnumerable<Product> IProductService.GetProductsByFilter(Filter filter)
         {
             throw new NotImplementedException();
         }

@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MSF.LogisticsPlatform.Domain.Entities;
-using MSF.LogisticsPlatform.BusinessLayer.Services;
+using MSF.LogisticsPlatform.BusinessLayer;
+using MSF.LogisticsPlatform.BusinessLayer.Models;
 
 namespace MSF.LogisticsPlatform.API.Controllers
 {
@@ -13,37 +13,32 @@ namespace MSF.LogisticsPlatform.API.Controllers
     [Route("api/Product")]
     public class ProductController : Controller
     {
-        //private readonly ProductRepository productRepository;
 
-        IProductService _productService;
+        IServiceFactory _ServiceFactory;
 
         //Constructor
         /* public ProductController()
          {
              productRepository = new ProductRepository();
          }*/
-        public ProductController(IProductService productService)
+        public ProductController(IServiceFactory serviceFactory)
         {
-            _productService = productService;
+            _ServiceFactory = serviceFactory;
         }
 
         // GET: api/values
 
         [HttpGet]
-        public IEnumerable<Product> GetAll()
+        public IActionResult GetAll()
         {
-            // var result = await productRepository.GetAll();
-            var result = _productService.GetAll();
-            return result;
+            var result = _ServiceFactory.GetProductService().GetAll();
+            return Ok(result);
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public Product Get(int id)
+        public IActionResult GetFilteredProducts(string filterJson)
         {
-            //return productRepository.Get(id);
-            return _productService.Get(id);
-
+            var result = _ServiceFactory.GetProductService().GetProductsByFilter(new Filter(filterJson));
+            return Ok(result);
         }
 
         //POST api/values
@@ -70,6 +65,6 @@ namespace MSF.LogisticsPlatform.API.Controllers
         {
             productRepository.Delete(id);
         }*/
-    
+
     }
 }
