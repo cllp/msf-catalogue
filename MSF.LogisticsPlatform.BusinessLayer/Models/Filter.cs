@@ -6,34 +6,26 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Models
 {
     public class Filter
     {
-        private readonly IList<FilterGroup> _filterGroups;
-       
+        private List<FilterGroup> _filterGroups;
+        public List<FilterGroup> FilterGroups { get; private set; }
+
         public Filter()
-        {
-            _filterGroups = new List<FilterGroup>();
+        {            
+            FilterGroups = new List<FilterGroup>();
         }
 
         public Filter(string filterJson)
         {
             // Do more stuffs
+
             _filterGroups = new List<FilterGroup>();
             // Parse filterJson and create the FilterGroup's.
         }
 
-        public string FilterAsJson()
-        {
-            // Do more stuffs (parse the collection from FilterGroups to Json).
-            return "";
-        }
-
-        public IList<FilterGroup> FilterGroups
-        {
-            get
-
-            {
-                return _filterGroups;
-            }
-            private set { }
-        }
+        //public string FilterAsJson()
+        //{
+        //    // Do more stuffs (parse the collection from FilterGroups to Json).
+        //    return "";
+        //}        
     }
 }

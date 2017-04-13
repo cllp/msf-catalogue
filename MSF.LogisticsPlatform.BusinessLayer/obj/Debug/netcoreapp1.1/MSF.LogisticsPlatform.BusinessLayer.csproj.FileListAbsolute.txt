@@ -7,3 +7,12 @@ C:\Dev\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1.1
 C:\Dev\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.AssemblyInfo.cs
 C:\Dev\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.dll
 C:\Dev\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.pdb
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.deps.json
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.dll
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.pdb
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.dll
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.pdb
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.csprojResolveAssemblyReference.cache
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.AssemblyInfo.cs
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.dll
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.pdb

@@ -7,6 +7,7 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Models
     public class FilterGroup
     {
         private Dictionary<string, bool> _values;
+        public Dictionary<string, bool> FilterItem { get { return _values; } private set { } }
 
         public FilterGroup(int groupId, string groupDescription)
         {

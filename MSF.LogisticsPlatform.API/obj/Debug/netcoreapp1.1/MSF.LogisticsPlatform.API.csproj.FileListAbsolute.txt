@@ -44,3 +44,16 @@ C:\Dev\msf-catalogue\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.Logis
 C:\Dev\msf-catalogue\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.pdb
 C:\Dev\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.dll
 C:\Dev\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.pdb
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.deps.json
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.runtimeconfig.json
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.runtimeconfig.dev.json
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.dll
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.pdb
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.dll
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.dll
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.pdb
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.pdb
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.csprojResolveAssemblyReference.cache
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.AssemblyInfo.cs
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.dll
+C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.pdb
