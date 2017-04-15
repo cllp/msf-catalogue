@@ -10859,7 +10859,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
-      "Dapper >= 1.50.2",
       "MSF.LogisticsPlatform.BusinessLayer >= 1.0.0",
       "Microsoft.ApplicationInsights.AspNetCore >= 2.0.0",
       "Microsoft.AspNetCore >= 1.1.1",
@@ -10901,10 +10900,6 @@
     "frameworks": {
       "netcoreapp1.1": {
         "dependencies": {
-          "Dapper": {
-            "target": "Package",
-            "version": "1.50.2"
-          },
           "Microsoft.AspNetCore": {
             "target": "Package",
             "version": "1.1.1"

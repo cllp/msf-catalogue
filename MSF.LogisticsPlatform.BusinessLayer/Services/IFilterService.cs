@@ -8,6 +8,6 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
 {
     public interface IFilterService
     {
-        Filter GetFilter(string category);
+        List<FilterGroup> GetFilter(string category);
     }
 }

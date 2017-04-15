@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MSF.LogisticsPlatform.BusinessLayer;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,9 @@ namespace MSF.LogisticsPlatform.API.Controllers
         public IActionResult GetAll(string category)
         {
             var result = _ServiceFactory.GetFilterService().GetFilter(category);
-            return Ok(result);
+
+            var result2 = JsonConvert.SerializeObject(result, Formatting.Indented);           
+            return Ok(result2);
         }
     }
 }

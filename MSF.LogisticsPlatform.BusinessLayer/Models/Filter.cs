@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace MSF.LogisticsPlatform.BusinessLayer.Models
 {
@@ -22,10 +21,10 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Models
             // Parse filterJson and create the FilterGroup's.
         }
 
-        //public string FilterAsJson()
-        //{
-        //    // Do more stuffs (parse the collection from FilterGroups to Json).
-        //    return "";
-        //}        
+        public string FilterAsJson()
+        {
+            // Do more stuffs (parse the collection from FilterGroups to Json).
+            return "";
+        }
     }
 }
