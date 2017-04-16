@@ -15,7 +15,7 @@ namespace MSF.LogisticsPlatform.Domain.Infrastucture
         //Server=tcp:twb3server.database.windows.net,1433;Initial Catalog=TWB3;Persist Security Info=False;User ID=mats.weidmar;Password=HackademyRulezOk!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
 
         //Chen's connectionstring here, please don't remove it
-        private readonly string connectionString = "Data Source = (localdb)\\MSSQLLocalDB;Initial Catalog = master; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        private readonly string connectionString = "Data Source=DESKTOP-O942SQF\\SQLEXPRESS;Initial Catalog = MIC_Data; Integrated Security = True; Connect Timeout = 15; Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         public IDbConnection Connection
         {

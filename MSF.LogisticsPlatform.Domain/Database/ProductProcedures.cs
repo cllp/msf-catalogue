@@ -5,6 +5,7 @@ using System.Data;
 using MSF.LogisticsPlatform.Domain.Entities;
 using MSF.LogisticsPlatform.Domain.Database.Data;
 using Dapper;
+using System.Linq;
 
 namespace MSF.LogisticsPlatform.Domain.Database
 {
@@ -22,14 +23,14 @@ namespace MSF.LogisticsPlatform.Domain.Database
             //List<Product> productList = SqlMapper.Query<Product>(_dbConnection, "EXEC spFiltreratMeck()", CommandType.StoredProcedure).ToList();
             //return productList;
 
-            throw new NotImplementedException();
-
+            //throw new NotImplementedException();
+            IEnumerable<Product> productList = SqlMapper.Query<Product>(_dbConnection, "dbo.GetFilteredProductList", commandType: CommandType.StoredProcedure);
+            return productList;
 
         }
 
         public IEnumerable<Product> GetFilteredProducts(ShelterFilter shelterFilter)
-        {
-            
+        {            
             throw new NotImplementedException();
         }
 

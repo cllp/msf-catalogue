@@ -9,7 +9,7 @@ namespace MSF.LogisticsPlatform.Domain.Entities
         public int ProductID { get; set; }
         public string ProductName { get; set; }
         public string ProductPicture { get; set; }
-        public int Rating { get; set; }
+        public int ProductRating { get; set; }
         public string SupplierName { get; set; }
     }
 }

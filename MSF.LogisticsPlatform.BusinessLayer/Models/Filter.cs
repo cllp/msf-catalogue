@@ -18,6 +18,7 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Models
             // Do more stuffs
 
             _filterGroups = new List<FilterGroup>();
+            
             // Parse filterJson and create the FilterGroup's.
         }
 

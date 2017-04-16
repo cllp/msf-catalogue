@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MSF.LogisticsPlatform.BusinessLayer;
 using MSF.LogisticsPlatform.BusinessLayer.Models;
+using Newtonsoft.Json;
 
 namespace MSF.LogisticsPlatform.API.Controllers
 {
@@ -15,12 +16,7 @@ namespace MSF.LogisticsPlatform.API.Controllers
     {
 
         IServiceFactory _ServiceFactory;
-
-        //Constructor
-        /* public ProductController()
-         {
-             productRepository = new ProductRepository();
-         }*/
+        
         public ProductController(IServiceFactory serviceFactory)
         {
             _ServiceFactory = serviceFactory;
@@ -32,7 +28,11 @@ namespace MSF.LogisticsPlatform.API.Controllers
         public IActionResult GetAll()
         {
             var result = _ServiceFactory.GetProductService().GetAll();
-            return Ok(result);
+            var result2 = JsonConvert.SerializeObject(result, Formatting.Indented);
+            return Ok(result2);
+
+            //var result = _ServiceFactory.GetProductService().GetAll();
+            //return Ok(result);
         }
 
         public IActionResult GetFilteredProducts(string filterJson)
