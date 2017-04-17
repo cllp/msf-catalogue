@@ -6,12 +6,15 @@ using MSF.LogisticsPlatform.Domain.Infrastucture;
 using MSF.LogisticsPlatform.BusinessLayer.Models;
 using MSF.LogisticsPlatform.Domain.Database;
 using AutoMapper;
+using MSF.LogisticsPlatform.Domain.Entities;
+using Dapper;
 
 namespace MSF.LogisticsPlatform.BusinessLayer.Services
 {
     public class ProductService : IProductService
     {
         private readonly IDBConnectionFactory _dbConnectionFactory;
+        
         public ProductService(IDBConnectionFactory dbConnectionFactory)
         {
             _dbConnectionFactory = dbConnectionFactory;
@@ -55,15 +58,12 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
 
         }
 
-        public IEnumerable<Product> GetProductsByFilter(Filter filter)
+        public IEnumerable<Domain.Entities.Product> GetProductsByFilter(Filter filter)
         {
             throw new NotImplementedException();
         }
 
-        public Product Get(int id)
-        {
-            throw new NotImplementedException();
-        }        
+        
         
         public void Add(Product product)
         {

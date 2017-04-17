@@ -7476,15 +7476,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Min dator\\.nuget\\packages\\": {}
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\Final_Structure\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj",
+      "projectUniqueName": "C:\\MSF\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj",
       "projectName": "MSF.LogisticsPlatform.Domain",
-      "projectPath": "C:\\dev\\Final_Structure\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj",
-      "outputPath": "C:\\dev\\Final_Structure\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\obj\\",
+      "projectPath": "C:\\MSF\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj",
+      "outputPath": "C:\\MSF\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

@@ -28,7 +28,33 @@ namespace MSF.LogisticsPlatform.Domain.Database
             return productList;
 
         }
+        
 
+            public Domain.Entities.Product Get(int id)
+            {
+
+                   //mapping data between two tables
+                    var sql = @"
+                     select * from Product where ProductID = @id
+                     select  * from AttributeClassification where AttributeSectionID = @id";
+
+                    using (var multi = _dbConnection.QueryMultiple(sql, new { id = id }))
+                    {
+                        var products = multi.Read<Domain.Entities.Product>().SingleOrDefault();
+                        var attributeClassification = multi.Read<AttributeClassification>().ToList();
+
+                        if (products != null && attributeClassification != null)
+                        {
+                            products.attributeClassification.AddRange(attributeClassification);
+                        }
+                        return products;
+                    }
+
+                }
+            }
+            
+            
+       
         public IEnumerable<Product> GetFilteredProducts(ShelterFilter shelterFilter)
         {            
             throw new NotImplementedException();

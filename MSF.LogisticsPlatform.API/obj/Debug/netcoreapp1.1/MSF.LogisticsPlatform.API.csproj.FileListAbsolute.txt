@@ -57,3 +57,16 @@ C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\obj\Debug\netcore
 C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.AssemblyInfo.cs
 C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.dll
 C:\dev\Final_Structure\msf-catalogue\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.pdb
+C:\MSF\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.deps.json
+C:\MSF\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.runtimeconfig.json
+C:\MSF\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.runtimeconfig.dev.json
+C:\MSF\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.dll
+C:\MSF\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.pdb
+C:\MSF\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.dll
+C:\MSF\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.dll
+C:\MSF\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.pdb
+C:\MSF\msf-catalogue\MSF.LogisticsPlatform.API\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.pdb
+C:\MSF\msf-catalogue\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.csprojResolveAssemblyReference.cache
+C:\MSF\msf-catalogue\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.AssemblyInfo.cs
+C:\MSF\msf-catalogue\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.dll
+C:\MSF\msf-catalogue\MSF.LogisticsPlatform.API\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.API.pdb

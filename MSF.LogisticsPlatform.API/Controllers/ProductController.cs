@@ -41,6 +41,14 @@ namespace MSF.LogisticsPlatform.API.Controllers
             return Ok(result);
         }
 
+        public IActionResult Get(int id)
+        {
+            var result = _ServiceFactory.GetProductService().Get(id);
+            return Ok(result);
+
+        }
+
+
         //POST api/values
         //[HttpPost]
         /*public void Post([FromBody]Product prod)
