@@ -10,5 +10,6 @@ namespace MSF.LogisticsPlatform.Domain.Database
     {
         IEnumerable<Product> GetAllProducts();
         IEnumerable<Product> GetFilteredProducts(ShelterFilter productFilter);
+        IEnumerable<ProductDetail> GetById(int id);
     }
 }

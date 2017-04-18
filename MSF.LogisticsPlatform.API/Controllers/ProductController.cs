@@ -52,7 +52,7 @@ namespace MSF.LogisticsPlatform.API.Controllers
             return filter;
         }
 
-        [HttpGet("{filterJson}")]
+        [Route("api/product/filterJson")]
         public IActionResult GetFilteredProducts(string filterJson)
         {
             SelectedFilters selectedFilters = JsonConvert.DeserializeObject<SelectedFilters>(filterJson); var result = _ServiceFactory.GetProductService().GetProductsByFilter(selectedFilters.ProductCategory, GetFilter(selectedFilters));

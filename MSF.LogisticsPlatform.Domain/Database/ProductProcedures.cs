@@ -24,6 +24,13 @@ namespace MSF.LogisticsPlatform.Domain.Database
             return productList;
         }
 
+        public IEnumerable<ProductDetail> GetById(int id)
+        {
+            IEnumerable<ProductDetail> productDetailList;
+            productDetailList = SqlMapper.Query<ProductDetail>(_dbConnection, "SELECT * FROM dbo.vProductData Where ProductID =" + id);
+            return productDetailList;
+        }
+
         public IEnumerable<Product> GetFilteredProducts(ShelterFilter shelterFilter)
         {
             throw new NotImplementedException();

@@ -7,7 +7,6 @@ using Dapper;
 using MSF.LogisticsPlatform.Domain.Infrastucture;
 using MSF.LogisticsPlatform.BusinessLayer.Models;
 using MSF.LogisticsPlatform.Domain.Database;
-using MSF.LogisticsPlatform.Domain.Repositories;
 
 namespace MSF.LogisticsPlatform.BusinessLayer.Services
 {
@@ -38,9 +37,9 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
 
                 dbConnection.Open();
 
-                var productRepository = new ProductRepository(dbConnection);
+                var productRepository = new ProductProcedures(dbConnection);
 
-                var productDetailEntity = productRepository.GetAll(id);
+                var productDetailEntity = productRepository.GetById(id);
 
                 Mapper.Initialize(cfg => cfg.CreateMap<ProductDetail, Domain.Entities.ProductDetail>().ReverseMap());
 
