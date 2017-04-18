@@ -19,10 +19,7 @@ namespace MSF.LogisticsPlatform.BusinessLayer
         {
             return new ProductService(_dbConnectionFactory);
         }
-        public IProductService Get(int id)
-        {
-            return new ProductService(_dbConnectionFactory);
-        }
+   
 
         public IFilterService GetFilterService()
         {

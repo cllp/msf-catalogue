@@ -8,8 +8,8 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
     public interface IProductService
     {
         IEnumerable<Product> GetAll();
-        IEnumerable<Product> GetProductsByFilter(Filter filter);
-        Product Get(int id);
+        IEnumerable<Product> GetProductsByFilter(string category, IEnumerable<FilterGroup> filterGroup);
+        IEnumerable<ProductDetail> Get(int id);
         void Add(Product prod);
         
 

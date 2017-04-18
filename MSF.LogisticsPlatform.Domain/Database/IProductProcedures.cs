@@ -9,9 +9,6 @@ namespace MSF.LogisticsPlatform.Domain.Database
     public interface IProductProcedures
     {
         IEnumerable<Product> GetAllProducts();
-
-        Product Get(int id);
-
         IEnumerable<Product> GetFilteredProducts(ShelterFilter productFilter);
     }
 }

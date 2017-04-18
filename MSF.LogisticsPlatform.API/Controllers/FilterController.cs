@@ -14,25 +14,20 @@ namespace MSF.LogisticsPlatform.API.Controllers
     {
         IServiceFactory _ServiceFactory;
 
-        //Constructor
-        /* public ProductController()
-         {
-             productRepository = new ProductRepository();
-         }*/
         public FilterController(IServiceFactory serviceFactory)
         {
             _ServiceFactory = serviceFactory;
         }
 
-        // GET: api/values
+        // GET: api/filter
 
         [HttpGet]
         public IActionResult GetAll(string category)
         {
             var result = _ServiceFactory.GetFilterService().GetFilter(category);
 
-            var result2 = JsonConvert.SerializeObject(result, Formatting.Indented);           
-            return Ok(result2);
+            var formatedResult = JsonConvert.SerializeObject(result, Formatting.Indented);
+            return Ok(formatedResult);
         }
     }
 }

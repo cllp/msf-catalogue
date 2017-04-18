@@ -2560,7 +2560,7 @@
       ]
     },
     "Dapper/1.50.2": {
-      "sha512": "PhxIV8TI/5aYdLT4epuIZB+Evf0sv9gcQDpFGa04fSKDfNQIChRq0sKUgQbfpFWbuDW/UDDuiL3Grkhp/cvYrA==",
+      "sha512": "31Ju5VGyNNc66OAsw+SCp1TWPBuyw8ZBdkMG5pSUPChZcy27s2GhVz5B9INP4f25mPqfiJ+mfeHy9JAJyyT+LQ==",
       "type": "package",
       "path": "dapper/1.50.2",
       "files": [
@@ -7717,15 +7717,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "C:\\Users\\talent2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MSF\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\MSF.LogisticsPlatform.BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\MSF.LogisticsPlatform.BusinessLayer.csproj",
       "projectName": "MSF.LogisticsPlatform.BusinessLayer",
-      "projectPath": "C:\\MSF\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\MSF.LogisticsPlatform.BusinessLayer.csproj",
-      "outputPath": "C:\\MSF\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\obj\\",
+      "projectPath": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\MSF.LogisticsPlatform.BusinessLayer.csproj",
+      "outputPath": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
@@ -7733,8 +7733,8 @@
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "C:\\MSF\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj": {
-              "projectPath": "C:\\MSF\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj"
+            "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj": {
+              "projectPath": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj"
             }
           }
         }

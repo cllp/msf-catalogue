@@ -8,14 +8,10 @@ namespace MSF.LogisticsPlatform.Domain.Infrastucture
 {
     public class DBConnectionFactory:IDBConnectionFactory,IDisposable
     {
-        //private readonly string connectionString = "Data Source=MMA-4CZ13909R0\\SQLEXPRESS01;Initial Catalog=MIC_Data;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";        
-        //Server=DIGIMON\MSSQLSERVER01;Initial Catalog=MIC_Data;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
         //To connent Azure SQL server just change the conn. String
         //Server=tcp:twb3server.database.windows.net,1433;Initial Catalog=TWB3;Persist Security Info=False;User ID=mats.weidmar;Password=HackademyRulezOk!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
 
-        //Chen's connectionstring here, please don't remove it
-        private readonly string connectionString = @"Server = DIGIMON\MSSQLSERVER01;Initial Catalog = MIC_Data; Integrated Security = True; Connect Timeout = 15; Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        private readonly string connectionString = @"Data Source=MMA-4CZ13909R0\SQLEXPRESS01;Initial Catalog=MIC_Data;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         public IDbConnection Connection
         {

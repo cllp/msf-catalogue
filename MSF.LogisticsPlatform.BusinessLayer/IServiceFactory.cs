@@ -8,7 +8,5 @@ namespace MSF.LogisticsPlatform.BusinessLayer
     {
         Services.IProductService GetProductService();
         Services.IFilterService GetFilterService();
-        Services.IProductService Get(int id);
-
     }
 }

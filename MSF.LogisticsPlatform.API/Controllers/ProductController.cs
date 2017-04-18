@@ -16,63 +16,47 @@ namespace MSF.LogisticsPlatform.API.Controllers
     {
 
         IServiceFactory _ServiceFactory;
-        
+
         public ProductController(IServiceFactory serviceFactory)
         {
             _ServiceFactory = serviceFactory;
         }
 
-        // GET: api/values
+        // GET: api/product
 
         [HttpGet]
         public IActionResult GetAll()
         {
             var result = _ServiceFactory.GetProductService().GetAll();
-            var result2 = JsonConvert.SerializeObject(result, Formatting.Indented);
-            return Ok(result2);
-
-            //var result = _ServiceFactory.GetProductService().GetAll();
-            //return Ok(result);
+            var formatedResult = JsonConvert.SerializeObject(result, Formatting.Indented);
+            return Ok(formatedResult);
         }
 
-        public IActionResult GetFilteredProducts(string filterJson)
-        {
-            var result = _ServiceFactory.GetProductService().GetProductsByFilter(new Filter(filterJson));
-            return Ok(result);
-        }
-
+        [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             var result = _ServiceFactory.GetProductService().Get(id);
+            var formatedResult = JsonConvert.SerializeObject(result, Formatting.Indented);
+            return Ok(formatedResult);
+        }
+
+        private IEnumerable<FilterGroup> GetFilter(SelectedFilters selectedFilters)
+        {
+            var filter = _ServiceFactory.GetFilterService().GetFilter(selectedFilters.ProductCategory);
+            foreach (var selectedFilter in selectedFilters.FilterGroups)
+            {
+                var filterGroup = filter.Find((x) => x.FilterGroupId == selectedFilter.ProductGroupId); if (filterGroup == null) { throw new ArgumentException(string.Format("FilterGroupId [{0}] does not exist for category [{1}]", selectedFilter.ProductGroupId, selectedFilters.ProductCategory)); }
+                var filterItem = filterGroup.FilterItemsGroup.Find((x) => x.FilterCriteria == selectedFilter.FilterCriteria); if (filterItem == null) { throw new ArgumentException(string.Format("FilterCriteria [{0}] does not exist for filtergroup [{1}]", selectedFilter.FilterCriteria, filterGroup.FilterGroupId)); }
+                filterItem.IsChecked = true;
+            }
+            return filter;
+        }
+
+        [HttpGet("{filterJson}")]
+        public IActionResult GetFilteredProducts(string filterJson)
+        {
+            SelectedFilters selectedFilters = JsonConvert.DeserializeObject<SelectedFilters>(filterJson); var result = _ServiceFactory.GetProductService().GetProductsByFilter(selectedFilters.ProductCategory, GetFilter(selectedFilters));
             return Ok(result);
-
         }
-
-
-        //POST api/values
-        //[HttpPost]
-        /*public void Post([FromBody]Product prod)
-        {
-            if (ModelState.IsValid)
-
-                _productService.Add(prod);
-        }
-        
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]Product prod)
-        {
-            prod.ProductID = id;
-            if (ModelState.IsValid)
-                productRepository.Update(prod);
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-            productRepository.Delete(id);
-        }*/
-
     }
 }
