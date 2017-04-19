@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using MSF.LogisticsPlatform.BusinessLayer.Services;
 using MSF.LogisticsPlatform.BusinessLayer;
+using AutoMapper;
 
 namespace MSF.LogisticsPlatform.API
 {
@@ -31,7 +31,12 @@ namespace MSF.LogisticsPlatform.API
         {
             // Add framework services.
             services.AddMvc();
-            services.AddTransient<IServiceFactory, ServiceFactory>();           
+            services.AddTransient<IServiceFactory, ServiceFactory>();
+
+            Mapper.Initialize(x =>
+            {
+                AutoMapperConfig.ConfigAction.Invoke(x);       
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

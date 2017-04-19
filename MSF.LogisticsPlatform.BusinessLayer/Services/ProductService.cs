@@ -41,12 +41,6 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
 
                 var productDetailEntity = productRepository.GetById(id);
 
-                Mapper.Initialize(cfg => cfg.CreateMap<ProductDetail, Domain.Entities.ProductDetail>().ReverseMap());
-
-
-                //// Define the default mapping, 
-                //// custom configuration can be also defined and will be merged with this one
-
                 var productDetailModel = Mapper.Map<List<ProductDetail>>(productDetailEntity);
                 return productDetailModel;
             }
@@ -64,12 +58,6 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
                 var productProcedures = new ProductProcedures(dbConnection);
                 var entities = productProcedures.GetAllProducts();
 
-                // Define the default mapping, 
-                // custom configuration can be also defined and will be merged with this one
-                Mapper.Initialize(cfg => cfg.CreateMap<Product, Domain.Entities.Product>());
-                Mapper.Initialize(cfg => cfg.CreateMap<Domain.Entities.Product, Product>());
-
-                // map entities to models
                 var productModel = Mapper.Map<List<Product>>(entities);
                 return productModel;
             }
