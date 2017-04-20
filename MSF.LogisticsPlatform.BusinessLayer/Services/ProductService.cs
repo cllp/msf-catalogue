@@ -71,13 +71,13 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
                 {
                     if (dbConnection.State == System.Data.ConnectionState.Open)
                         dbConnection.Close();
-
                     dbConnection.Open();
                     var productProcedures = new ProductProcedures(dbConnection);
-                    var entities = productProcedures.GetFilteredProducts(filterGroup.Translate());
+                    var entities = productProcedures.GetFilteredProducts(filterGroup.GetAsParameterArray());
+                    //IEnumerable<Product> filteredProducts = new IEnumerable<Product>(entities);
                 }
             }
-            throw new NotImplementedException();
+           throw new NotImplementedException();
         }
     }
 }

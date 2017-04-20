@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using MSF.LogisticsPlatform.Domain.Entities;
-using MSF.LogisticsPlatform.Domain.Database.Data;
 using Dapper;
 using System.Linq;
 
@@ -31,9 +30,14 @@ namespace MSF.LogisticsPlatform.Domain.Database
             return productDetailList;
         }
 
-        public IEnumerable<Product> GetFilteredProducts(ShelterFilter shelterFilter)
+        public IEnumerable<Product> GetFilteredProducts(string parameterAsArray)
         {
-            throw new NotImplementedException();
+            StringBuilder query = new StringBuilder();
+            query.Append("Exec dbo.GetFilteredProductsList ");
+            query.Append(parameterAsArray);
+
+            IEnumerable<Product> productList = SqlMapper.Query<Product>(_dbConnection, query.ToString());
+            return productList;
         }
     }
 }

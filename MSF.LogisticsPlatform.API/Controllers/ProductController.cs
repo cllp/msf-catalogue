@@ -10,7 +10,6 @@ using Newtonsoft.Json;
 
 namespace MSF.LogisticsPlatform.API.Controllers
 {
-    [Produces("application/json")]
     [Route("api/Product")]
     public class ProductController : Controller
     {
@@ -24,6 +23,7 @@ namespace MSF.LogisticsPlatform.API.Controllers
 
         // GET: api/product
 
+        [HttpGet]
         public IActionResult GetAll()
         {
             var result = _ServiceFactory.GetProductService().GetAll();
@@ -39,43 +39,23 @@ namespace MSF.LogisticsPlatform.API.Controllers
             return Ok(formatedResult);
         }
 
-        private IEnumerable<FilterGroup> GetFilter(SelectedFilters selectedFilters)
-        {
-            var filter = _ServiceFactory.GetFilterService().GetFilter(selectedFilters.ProductCategory);
-            foreach (var selectedFilter in selectedFilters.FilterGroups)
-            {
-                var filterGroup = filter.Find((x) => x.FilterGroupId == selectedFilter.ProductGroupId);
-                if (filterGroup == null)
-                {
-                    throw new ArgumentException(string.Format("FilterGroupId [{0}] does not exist for category [{1}]", selectedFilter.ProductGroupId, selectedFilters.ProductCategory));
-                }
-                var filterItem = filterGroup.FilterItemsGroup.Find((x) => x.FilterCriteria == selectedFilter.FilterCriteria);
-                if (filterItem == null)
-                {
-                    throw new ArgumentException(string.Format("FilterCriteria [{0}] does not exist for filtergroup [{1}]", selectedFilter.FilterCriteria, filterGroup.FilterGroupId));
-                }
-                filterItem.IsChecked = true;
-            }
-            return filter;
-        }
 
-        [HttpGet]
-        public IActionResult GetFilteredProducts()
+
+        [HttpGet("{productCategory}/{filterJson}")]
+        public IActionResult GetFilteredProducts(string productCategory, string filterJson)
         {
-            var filterJson = @"[
-            { 
-                ""ProductCategory"": ""Shelter"",
-                ""FilterGroups"": [{
-                        ""ProductGroupId"": 1,
-                        ""FilterCriteria"": ""_BASIC""
-                    } 
+            var filterJsonSim = @"[
+            {
+                ""ProductCategory"":""Shelter"",
+                ""FilterGroups"":[{
+                        ""FilterCriteria"": ""@BASIC""
+                    }
                 ]
             }
         ]";
-
-            List<SelectedFilters> selectedFilters = JsonConvert.DeserializeObject<List<SelectedFilters>>(filterJson);
-            var result = _ServiceFactory.GetProductService().GetProductsByFilter(selectedFilters.ProductCategory, GetFilters);
-
+            //IEnumerable<FilterGroup> selectedfilterGroup = GetFilter(selectedFilters);
+            var filterGroups = JsonConvert.DeserializeObject<List<FilterGroup>>(filterJsonSim);
+            var result = _ServiceFactory.GetProductService().GetProductsByFilter(productCategory, filterGroups);
             return Ok(result);
         }
     }
