@@ -69,7 +69,11 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
             {
                 using (var dbConnection = _dbConnectionFactory.Connection)
                 {
-                    if (dbConnection.State == System.Data.ConnectionState.Open) dbConnection.Close(); dbConnection.Open(); var productProcedures = new ProductProcedures(dbConnection);
+                    if (dbConnection.State == System.Data.ConnectionState.Open)
+                        dbConnection.Close();
+
+                    dbConnection.Open();
+                    var productProcedures = new ProductProcedures(dbConnection);
                     var entities = productProcedures.GetFilteredProducts(filterGroup.Translate());
                 }
             }
