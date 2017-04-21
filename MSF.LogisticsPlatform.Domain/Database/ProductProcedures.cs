@@ -33,7 +33,7 @@ namespace MSF.LogisticsPlatform.Domain.Database
         public IEnumerable<Product> GetFilteredProducts(string parameterAsArray)
         {
             StringBuilder query = new StringBuilder();
-            query.Append("Exec dbo.GetFilteredProductsList ");
+            query.Append("Exec dbo.GetFilteredProductList ");
             query.Append(parameterAsArray);
 
             IEnumerable<Product> productList = SqlMapper.Query<Product>(_dbConnection, query.ToString());

@@ -65,7 +65,7 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
 
         public IEnumerable<Product> GetProductsByFilter(string category, IEnumerable<FilterGroup> filterGroup)
         {
-            if (category == "Shelter")
+            if (category == "shelter")
             {
                 using (var dbConnection = _dbConnectionFactory.Connection)
                 {
@@ -74,10 +74,12 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
                     dbConnection.Open();
                     var productProcedures = new ProductProcedures(dbConnection);
                     var entities = productProcedures.GetFilteredProducts(filterGroup.GetAsParameterArray());
+                    var productModel = Mapper.Map<List<Product>>(entities);
                     //IEnumerable<Product> filteredProducts = new IEnumerable<Product>(entities);
+                    return productModel;
                 }
             }
-           throw new NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

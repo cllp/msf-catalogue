@@ -46,17 +46,19 @@ namespace MSF.LogisticsPlatform.API.Controllers
         {
             var filterJsonSim = @"[
             {
-                ""ProductCategory"":""Shelter"",
-                ""FilterGroups"":[{
-                        ""FilterCriteria"": ""@BASIC""
+                ""FilterGroupDescription"":""shelter"",
+                ""FilterItemsGroup"":[{
+                        ""FilterCriteria"": ""@BASIC"",
+                        ""IsChecked"":""true""
                     }
                 ]
             }
         ]";
-            //IEnumerable<FilterGroup> selectedfilterGroup = GetFilter(selectedFilters);
-            var filterGroups = JsonConvert.DeserializeObject<List<FilterGroup>>(filterJsonSim);
+            
+            List<FilterGroup> filterGroups = JsonConvert.DeserializeObject<List<FilterGroup>>(filterJsonSim);
             var result = _ServiceFactory.GetProductService().GetProductsByFilter(productCategory, filterGroups);
-            return Ok(result);
+            var formatedResult = JsonConvert.SerializeObject(result, Formatting.Indented);
+            return Ok(formatedResult);
         }
     }
 }
