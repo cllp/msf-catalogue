@@ -7,6 +7,7 @@ using Dapper;
 using MSF.LogisticsPlatform.Domain.Infrastucture;
 using MSF.LogisticsPlatform.BusinessLayer.Models;
 using MSF.LogisticsPlatform.Domain.Database;
+using MSF.LogisticsPlatform.Domain.Entities;
 
 namespace MSF.LogisticsPlatform.BusinessLayer.Services
 {
@@ -20,50 +21,37 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
 
         }
 
-        public void Add(Product prod)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<ProductDetail> Get(int id)
+        public Product Get(int id)
         {
             // Get data to productDetails model
             using (var dbConnection = _dbConnectionFactory.Connection)
             {
-                if (dbConnection.State == System.Data.ConnectionState.Open)
-                {
-                    dbConnection.Close();
-                }
-
+                
                 dbConnection.Open();
 
                 var productRepository = new ProductProcedures(dbConnection);
 
-                var productDetailEntity = productRepository.GetById(id);
-
-                var productDetailModel = Mapper.Map<List<ProductDetail>>(productDetailEntity);
-                return productDetailModel;
+                Mapper.Initialize(cfg => cfg.CreateMap<Product, ProductDetailModel>());
+                return AutoMapper.Mapper.Map<Product>(productRepository.GetById(id));
             }
         }
 
-        public IEnumerable<Product> GetAll()
+        public IEnumerable<ProductModel> GetAll()
         {
             using (var dbConnection = _dbConnectionFactory.Connection)
             {
-                if (dbConnection.State == System.Data.ConnectionState.Open)
-                    dbConnection.Close();
 
                 dbConnection.Open();
 
                 var productProcedures = new ProductProcedures(dbConnection);
-                var entities = productProcedures.GetAllProducts();
+                
 
-                var productModel = Mapper.Map<List<Product>>(entities);
+                var productModel = Mapper.Map<List<ProductModel>>(productProcedures.GetAllProducts());
                 return productModel;
             }
         }
 
-        public IEnumerable<Product> GetProductsByFilter(string category, IEnumerable<FilterGroup> filterGroup)
+        public IEnumerable<ProductModel> GetProductsByFilter(string category, IEnumerable<FilterGroup> filterGroup)
         {
             if (category == "shelter")
             {
@@ -74,7 +62,7 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
                     dbConnection.Open();
                     var productProcedures = new ProductProcedures(dbConnection);
                     var entities = productProcedures.GetFilteredProducts(filterGroup.GetAsParameterArray());
-                    var productModel = Mapper.Map<List<Product>>(entities);
+                    var productModel = Mapper.Map<List<ProductModel>>(entities);
                     //IEnumerable<Product> filteredProducts = new IEnumerable<Product>(entities);
                     return productModel;
                 }

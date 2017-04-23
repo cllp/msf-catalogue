@@ -30,6 +30,7 @@ namespace MSF.LogisticsPlatform.Domain.Entities
         public int Stability { get; set; }
         public int TendencyToAging { get; set; }
         public string LifeSpanForMedicalUse { get; set; }
+        public string ProductPicture { get; set; }
         public string MaintenancePlan { get; set; }
         public int Modularity { get; set; }
         public int Cutomization { get; set; }

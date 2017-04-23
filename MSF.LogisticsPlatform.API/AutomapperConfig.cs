@@ -24,7 +24,7 @@ namespace MSF.LogisticsPlatform.API
         {
             public ProductProfile()
             {
-                CreateMap<BusinessLayer.Models.Product, Domain.Entities.Product>().ReverseMap();
+                CreateMap<BusinessLayer.Models.ProductModel, Domain.Entities.Product>().ReverseMap();
             }
         }
 
@@ -32,7 +32,7 @@ namespace MSF.LogisticsPlatform.API
         {
             public ProductDetailsProfile()
             {
-                CreateMap<BusinessLayer.Models.ProductDetail, Domain.Entities.ProductDetail>().ReverseMap();
+                CreateMap<BusinessLayer.Models.ProductDetailModel, Domain.Entities.ProductDetail>().ReverseMap();
             }
         }
     }

@@ -23,11 +23,31 @@ namespace MSF.LogisticsPlatform.Domain.Database
             return productList;
         }
 
-        public IEnumerable<ProductDetail> GetById(int id)
+        public Product GetById(int id)
         {
-            IEnumerable<ProductDetail> productDetailList;
-            productDetailList = SqlMapper.Query<ProductDetail>(_dbConnection, "SELECT * FROM dbo.vProductData Where ProductID =" + id);
-            return productDetailList;
+
+
+            var sqlQuery = @" 
+                select  * FROM dbo.vProductData Where vProductData.ProductID =@id
+
+                select  ProductID, ProductFileName, FDescription from ProductFile where ProductID =@id ";
+
+           using (var multi = _dbConnection.QueryMultiple(sqlQuery, new { id = id }))
+            {
+
+                var products = multi.Read<Product>().SingleOrDefault();
+                var imageFile = multi.Read<ProductFile>().ToList();
+
+                if (products != null && imageFile != null)
+                {
+                    
+                    products.imageFile.AddRange(imageFile);
+
+                }
+                return products;
+            }
+
+
         }
 
         public IEnumerable<Product> GetFilteredProducts(string parameterAsArray)
@@ -40,4 +60,5 @@ namespace MSF.LogisticsPlatform.Domain.Database
             return productList;
         }
     }
+
 }

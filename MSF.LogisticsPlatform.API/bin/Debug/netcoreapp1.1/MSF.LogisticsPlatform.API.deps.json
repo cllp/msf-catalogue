@@ -3546,7 +3546,7 @@
     "dapper/1.50.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4sUecJaw/cXXq0nyM1qld+GcE+sKzEOEECotlbJN7hZRAY8c09sNWDY7MynUw0/W3hF+k9VPWu2RbEXGnJ8svA==",
+      "sha512": "sha512-PhxIV8TI/5aYdLT4epuIZB+Evf0sv9gcQDpFGa04fSKDfNQIChRq0sKUgQbfpFWbuDW/UDDuiL3Grkhp/cvYrA==",
       "path": "dapper/1.50.2",
       "hashPath": "dapper.1.50.2.nupkg.sha512"
     },
@@ -4295,7 +4295,7 @@
     "system.interactive.async/3.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-iyrgkZz9Dzm0fiPouQszFC3SO/46k6AYd/jG9bu+/o0AoDMaRXtlo3TIuWVNtOuJFd1noL963QouroJ0T3rImw==",
+      "sha512": "sha512-UEM+WmG1Oq0bNbPx/E1jaIQ83QOrPfVDUyuYBtG6D6DpB77ytv9flPterMujumpHuoRjSc0ilSB8w41fQc05dw==",
       "path": "system.interactive.async/3.0.0",
       "hashPath": "system.interactive.async.3.0.0.nupkg.sha512"
     },

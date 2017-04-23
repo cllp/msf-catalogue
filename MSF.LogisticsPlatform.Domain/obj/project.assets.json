@@ -2450,7 +2450,7 @@
   },
   "libraries": {
     "Dapper/1.50.2": {
-      "sha512": "4sUecJaw/cXXq0nyM1qld+GcE+sKzEOEECotlbJN7hZRAY8c09sNWDY7MynUw0/W3hF+k9VPWu2RbEXGnJ8svA==",
+      "sha512": "PhxIV8TI/5aYdLT4epuIZB+Evf0sv9gcQDpFGa04fSKDfNQIChRq0sKUgQbfpFWbuDW/UDDuiL3Grkhp/cvYrA==",
       "type": "package",
       "path": "dapper/1.50.2",
       "files": [
@@ -7476,15 +7476,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jayway\\.nuget\\packages\\": {}
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj",
+      "projectUniqueName": "C:\\MSF01\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj",
       "projectName": "MSF.LogisticsPlatform.Domain",
-      "projectPath": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj",
-      "outputPath": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\obj\\",
+      "projectPath": "C:\\MSF01\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj",
+      "outputPath": "C:\\MSF01\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
