@@ -13,7 +13,7 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Models
             {
                 foreach (var filterItem in filterGroup.FilterItemsGroup)
                 {
-                    result.Append(filterItem.FilterCriteria);
+                    result.Append("@"+filterItem.FilterCriteria);
                     result.Append("=");
                     if (filterItem.IsChecked)
                     {

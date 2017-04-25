@@ -26,10 +26,10 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
                     FilterGroupDescription = "LIFESPAN OF INFRASTRUCTURE",
                     FilterItemsGroup = new List<FilterItem>()
                     {
-                        new FilterItem(){  Filter = "BASIC shelter (3 mths < x < 6 mths)", FilterCriteria = "@BASIC", IsChecked = false},
-                        new FilterItem(){  Filter = "TRANSITIONAL shelter (x < 18 mths)", FilterCriteria = "@TRANSITIONAL", IsChecked = false},
-                        new FilterItem(){  Filter = "WAREHOUSE structure (x < 2y)", FilterCriteria = "@WAREHOUSE", IsChecked = false},
-                        new FilterItem(){  Filter = "PREFABRICATED structures (x < 5y)", FilterCriteria = "@PREFABRICATED", IsChecked = false},
+                        new FilterItem(){  Filter = "BASIC shelter (3 mths < x < 6 mths)", FilterCriteria = "BASIC", IsChecked = false},
+                        new FilterItem(){  Filter = "TRANSITIONAL shelter (x < 18 mths)", FilterCriteria = "TRANSITIONAL", IsChecked = false},
+                        new FilterItem(){  Filter = "WAREHOUSE structure (x < 2y)", FilterCriteria = "WAREHOUSE", IsChecked = false},
+                        new FilterItem(){  Filter = "PREFABRICATED structures (x < 5y)", FilterCriteria = "PREFABRICATED", IsChecked = false},
                     }
                 }
             );
@@ -39,10 +39,10 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
                     FilterGroupDescription = "SIZE OF INFRASTRUCTURE",
                     FilterItemsGroup = new List<FilterItem>()
                     {
-                        new FilterItem(){ Filter = "FAMILY size (10m² < x < 20m²)",FilterCriteria= "@FamilySize", IsChecked= false },
-                        new FilterItem(){  Filter = "POLYVALENT size(20m² < x < 50m²)", FilterCriteria = "@POLYVALENTSize", IsChecked = false},
-                        new FilterItem(){  Filter = "MEDIUM size (50m² < x < 150m²)", FilterCriteria= "@MediumSize",IsChecked = false},
-                        new FilterItem(){  Filter = "LARGE size (150m² < x)", FilterCriteria="@LargeSize",IsChecked= false},
+                        new FilterItem(){ Filter = "FAMILY size (10m² < x < 20m²)",FilterCriteria= "FamilySize", IsChecked= false },
+                        new FilterItem(){  Filter = "POLYVALENT size(20m² < x < 50m²)", FilterCriteria = "POLYVALENTSize", IsChecked = false},
+                        new FilterItem(){  Filter = "MEDIUM size (50m² < x < 150m²)", FilterCriteria= "MediumSize",IsChecked = false},
+                        new FilterItem(){  Filter = "LARGE size (150m² < x)", FilterCriteria="LargeSize",IsChecked= false},
                     }
                 }
             );
@@ -52,9 +52,9 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
                    FilterGroupDescription = "THERMAL VALUE",
                    FilterItemsGroup = new List<FilterItem>()
                    {
-                       new FilterItem(){  Filter = "LOW",FilterCriteria= "@ThermalPerformLow", IsChecked= false },
-                       new FilterItem(){  Filter = "MEDIUM", FilterCriteria = "@ThermalPerformMedium", IsChecked = false},
-                       new FilterItem(){  Filter = "HIGH", FilterCriteria= "@ThermalPerformHigh", IsChecked=false },
+                       new FilterItem(){  Filter = "LOW",FilterCriteria= "ThermalPerformLow", IsChecked= false },
+                       new FilterItem(){  Filter = "MEDIUM", FilterCriteria = "ThermalPerformMedium", IsChecked = false},
+                       new FilterItem(){  Filter = "HIGH", FilterCriteria= "ThermalPerformHigh", IsChecked=false },
                     }
                }
             );
@@ -65,9 +65,9 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
                     FilterGroupDescription = "COST EFFECTIVENESS",
                     FilterItemsGroup = new List<FilterItem>()
                     {
-                        new FilterItem(){  Filter = "LOW , (0 < x < 100 €/m²)",FilterCriteria="@CostEffectiveLow", IsChecked= false },
-                        new FilterItem(){  Filter = "MEDIUM, (100€/m² < x < 500 €/m²)", FilterCriteria = "@CostEffectiveMedium", IsChecked = false},
-                        new FilterItem(){  Filter = "HIGH (500 €/m² < x < 1000 €/m²)", FilterCriteria= "@CostEffectiveHigh", IsChecked = false},
+                        new FilterItem(){  Filter = "LOW , (0 < x < 100 €/m²)",FilterCriteria="CostEffectiveLow", IsChecked= false },
+                        new FilterItem(){  Filter = "MEDIUM, (100€/m² < x < 500 €/m²)", FilterCriteria = "CostEffectiveMedium", IsChecked = false},
+                        new FilterItem(){  Filter = "HIGH (500 €/m² < x < 1000 €/m²)", FilterCriteria= "CostEffectiveHigh", IsChecked = false},
                     }
                 }
             );
@@ -77,9 +77,9 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
                    FilterGroupDescription = "SET-UP TIME",
                    FilterItemsGroup = new List<FilterItem>()
                    {
-                        new FilterItem(){  Filter = "LOW (0 < x < 5h)",FilterCriteria="@SetupTimeLow", IsChecked= false },
-                        new FilterItem(){ Filter = "MEDIUM (5h < x 2 days)", FilterCriteria = "@SetupTimeMedium", IsChecked = false},
-                        new FilterItem(){  Filter = "HIGH(2 days)", FilterCriteria= "@SetupTimeHigh", IsChecked = false},
+                        new FilterItem(){  Filter = "LOW (0 < x < 5h)",FilterCriteria="SetupTimeLow", IsChecked= false },
+                        new FilterItem(){ Filter = "MEDIUM (5h < x 2 days)", FilterCriteria = "SetupTimeMedium", IsChecked = false},
+                        new FilterItem(){  Filter = "HIGH(2 days)", FilterCriteria= "SetupTimeHigh", IsChecked = false},
                    }
                }
            );
@@ -89,10 +89,10 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
                    FilterGroupDescription = "SPECIFIC FEATURES",
                    FilterItemsGroup = new List<FilterItem>()
                    {
-                        new FilterItem(){ Filter = "FLOORING PROVIDED",FilterCriteria="@FlooringProvided", IsChecked= false },
-                        new FilterItem(){ Filter = "TRANSPORT BY PLANE", FilterCriteria = "@TransportedByPlane", IsChecked = false},
-                        new FilterItem(){ Filter = "TRANSPORT BY CONTAINER TRUCK", FilterCriteria= "@TransportedByTruck", IsChecked=false },
-                        new FilterItem(){ Filter = "TRANSPORT BY PICKUP",FilterCriteria="@TransportedBypickup", IsChecked= false },
+                        new FilterItem(){ Filter = "FLOORING PROVIDED",FilterCriteria="FlooringProvided", IsChecked= false },
+                        new FilterItem(){ Filter = "TRANSPORT BY PLANE", FilterCriteria = "TransportedByPlane", IsChecked = false},
+                        new FilterItem(){ Filter = "TRANSPORT BY CONTAINER TRUCK", FilterCriteria= "TransportedByTruck", IsChecked=false },
+                        new FilterItem(){ Filter = "TRANSPORT BY PICKUP",FilterCriteria="TransportedBypickup", IsChecked= false },
                    }
                }
            );
