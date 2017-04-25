@@ -2560,7 +2560,7 @@
       ]
     },
     "Dapper/1.50.2": {
-      "sha512": "4sUecJaw/cXXq0nyM1qld+GcE+sKzEOEECotlbJN7hZRAY8c09sNWDY7MynUw0/W3hF+k9VPWu2RbEXGnJ8svA==",
+      "sha512": "PhxIV8TI/5aYdLT4epuIZB+Evf0sv9gcQDpFGa04fSKDfNQIChRq0sKUgQbfpFWbuDW/UDDuiL3Grkhp/cvYrA==",
       "type": "package",
       "path": "dapper/1.50.2",
       "files": [
@@ -7717,15 +7717,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jayway\\.nuget\\packages\\": {}
+    "C:\\Users\\talent3\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\MSF.LogisticsPlatform.BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\talent3\\Desktop\\MSF 25-04-2016\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\MSF.LogisticsPlatform.BusinessLayer.csproj",
       "projectName": "MSF.LogisticsPlatform.BusinessLayer",
-      "projectPath": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\MSF.LogisticsPlatform.BusinessLayer.csproj",
-      "outputPath": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\obj\\",
+      "projectPath": "C:\\Users\\talent3\\Desktop\\MSF 25-04-2016\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\MSF.LogisticsPlatform.BusinessLayer.csproj",
+      "outputPath": "C:\\Users\\talent3\\Desktop\\MSF 25-04-2016\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
@@ -7733,8 +7733,8 @@
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj": {
-              "projectPath": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj"
+            "C:\\Users\\talent3\\Desktop\\MSF 25-04-2016\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj": {
+              "projectPath": "C:\\Users\\talent3\\Desktop\\MSF 25-04-2016\\msf-catalogue\\MSF.LogisticsPlatform.Domain\\MSF.LogisticsPlatform.Domain.csproj"
             }
           }
         }

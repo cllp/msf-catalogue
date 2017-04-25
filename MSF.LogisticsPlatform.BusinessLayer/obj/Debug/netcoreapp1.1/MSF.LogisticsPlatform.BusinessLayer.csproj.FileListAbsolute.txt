@@ -34,3 +34,12 @@ C:\MSF01\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1
 C:\MSF01\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.AssemblyInfo.cs
 C:\MSF01\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.dll
 C:\MSF01\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.pdb
+C:\Users\talent3\Desktop\MSF 25-04-2016\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.deps.json
+C:\Users\talent3\Desktop\MSF 25-04-2016\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.dll
+C:\Users\talent3\Desktop\MSF 25-04-2016\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.pdb
+C:\Users\talent3\Desktop\MSF 25-04-2016\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.dll
+C:\Users\talent3\Desktop\MSF 25-04-2016\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\bin\Debug\netcoreapp1.1\MSF.LogisticsPlatform.Domain.pdb
+C:\Users\talent3\Desktop\MSF 25-04-2016\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\talent3\Desktop\MSF 25-04-2016\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.AssemblyInfo.cs
+C:\Users\talent3\Desktop\MSF 25-04-2016\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.dll
+C:\Users\talent3\Desktop\MSF 25-04-2016\msf-catalogue\MSF.LogisticsPlatform.BusinessLayer\obj\Debug\netcoreapp1.1\MSF.LogisticsPlatform.BusinessLayer.pdb

@@ -4229,7 +4229,7 @@
       ]
     },
     "Dapper/1.50.2": {
-      "sha512": "4sUecJaw/cXXq0nyM1qld+GcE+sKzEOEECotlbJN7hZRAY8c09sNWDY7MynUw0/W3hF+k9VPWu2RbEXGnJ8svA==",
+      "sha512": "PhxIV8TI/5aYdLT4epuIZB+Evf0sv9gcQDpFGa04fSKDfNQIChRq0sKUgQbfpFWbuDW/UDDuiL3Grkhp/cvYrA==",
       "type": "package",
       "path": "dapper/1.50.2",
       "files": [
@@ -10874,15 +10874,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jayway\\.nuget\\packages\\": {}
+    "C:\\Users\\talent3\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.API\\MSF.LogisticsPlatform.API.csproj",
+      "projectUniqueName": "C:\\Users\\talent3\\Desktop\\MSF 25-04-2016\\msf-catalogue\\MSF.LogisticsPlatform.API\\MSF.LogisticsPlatform.API.csproj",
       "projectName": "MSF.LogisticsPlatform.API",
-      "projectPath": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.API\\MSF.LogisticsPlatform.API.csproj",
-      "outputPath": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.API\\obj\\",
+      "projectPath": "C:\\Users\\talent3\\Desktop\\MSF 25-04-2016\\msf-catalogue\\MSF.LogisticsPlatform.API\\MSF.LogisticsPlatform.API.csproj",
+      "outputPath": "C:\\Users\\talent3\\Desktop\\MSF 25-04-2016\\msf-catalogue\\MSF.LogisticsPlatform.API\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
@@ -10890,8 +10890,8 @@
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {
-            "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\MSF.LogisticsPlatform.BusinessLayer.csproj": {
-              "projectPath": "C:\\Dev\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\MSF.LogisticsPlatform.BusinessLayer.csproj"
+            "C:\\Users\\talent3\\Desktop\\MSF 25-04-2016\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\MSF.LogisticsPlatform.BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\talent3\\Desktop\\MSF 25-04-2016\\msf-catalogue\\MSF.LogisticsPlatform.BusinessLayer\\MSF.LogisticsPlatform.BusinessLayer.csproj"
             }
           }
         }

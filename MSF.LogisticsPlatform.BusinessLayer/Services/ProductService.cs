@@ -4,7 +4,7 @@ using System.Text;
 using System.IO;
 using AutoMapper;
 using Dapper;
-using MSF.LogisticsPlatform.Domain.Infrastucture;
+using MSF.LogisticsPlatform.Domain.Infrastructure;
 using MSF.LogisticsPlatform.BusinessLayer.Models;
 using MSF.LogisticsPlatform.Domain.Database;
 using MSF.LogisticsPlatform.Domain.Entities;

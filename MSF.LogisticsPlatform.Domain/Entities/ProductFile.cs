@@ -4,13 +4,15 @@ using System.Text;
 
 namespace MSF.LogisticsPlatform.Domain.Entities
 {
+    /*
+     * ProductFile from product file table.
+     * This class is linked to product table.
+     * 
+     */
     public class ProductFile
     {
-        public int ProductID { get; set; }
-       // public int FileId { get; set; }
-        public string ProductFileName { get; set; }
-        //public int SerialNum { get; set; }
-        public string FDescription { get; set; }
-        //public bool BActive { get; set; }
+        public int ProductID { get; set; }       
+        public string ProductFileName { get; set; }       
+        public string FDescription { get; set; }        
     }
 }
