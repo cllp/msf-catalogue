@@ -7,6 +7,10 @@ using static MSF.LogisticsPlatform.BusinessLayer.Models.FilterGroup;
 
 namespace MSF.LogisticsPlatform.BusinessLayer.Services
 {
+    /*
+     * This class include all filter layouts that are hardcoded.
+     * All filters are unchecked by default (isChecked=false).
+     */
     public class FilterService : IFilterService
     {
         private readonly IDBConnectionFactory _dbConnectionFactory;
@@ -17,15 +21,14 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
 
         public List<FilterGroup> GetFilter(string category)
         {
-
             List<FilterGroup> FilterGroups = new List<FilterGroup>();
-
             FilterGroups.Add(
                 new FilterGroup()
                 {
-                    FilterGroupDescription = "LIFESPAN OF INFRASTRUCTURE",
+                    FilterGroupDescription = "LIFESPAN OF INFRASTRUCTURE",//name of the filter group
                     FilterItemsGroup = new List<FilterItem>()
                     {
+                        //filters that belong to "LIFESPAN OF INFRASTRUCTURE" group
                         new FilterItem(){  Filter = "BASIC shelter (3 mths < x < 6 mths)", FilterCriteria = "BASIC", IsChecked = false},
                         new FilterItem(){  Filter = "TRANSITIONAL shelter (x < 18 mths)", FilterCriteria = "TRANSITIONAL", IsChecked = false},
                         new FilterItem(){  Filter = "WAREHOUSE structure (x < 2y)", FilterCriteria = "WAREHOUSE", IsChecked = false},

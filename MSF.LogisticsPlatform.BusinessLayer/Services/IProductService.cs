@@ -11,8 +11,5 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
         IEnumerable<ProductModel> GetAll();
         IEnumerable<ProductModel> GetProductsByFilter(string category, IEnumerable<FilterGroup> filterGroup);
         Product Get(int id);
-        //void Add(Product prod);
-        
-
     }
 }

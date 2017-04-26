@@ -11,6 +11,11 @@ using MSF.LogisticsPlatform.Domain.Entities;
 
 namespace MSF.LogisticsPlatform.BusinessLayer.Services
 {
+    /*
+     * This class will handle product services such as getting all products, one specific product or filtered products.
+     * It uses stored procedures to fetch products from DB and return them as IEnumerable objects
+     * 
+     */
     public class ProductService : IProductService
     {
         private readonly IDBConnectionFactory _dbConnectionFactory;
@@ -21,36 +26,37 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
 
         }
 
+        //Retrieve one product by {id}
         public Product Get(int id)
         {
-            // Get data to productDetails model
             using (var dbConnection = _dbConnectionFactory.Connection)
-            {
-                
+            {                
                 dbConnection.Open();
-
                 var productRepository = new ProductProcedures(dbConnection);
-
+                // Initialize the mapper between Entities.Product and Model.ProductDetailModel models.
                 Mapper.Initialize(cfg => cfg.CreateMap<Product, ProductDetailModel>());
                 return AutoMapper.Mapper.Map<Product>(productRepository.GetById(id));
             }
         }
 
+        //Retrieve all products
         public IEnumerable<ProductModel> GetAll()
         {
             using (var dbConnection = _dbConnectionFactory.Connection)
             {
-
                 dbConnection.Open();
-
-                var productProcedures = new ProductProcedures(dbConnection);
-                
-
+                var productProcedures = new ProductProcedures(dbConnection);              
+                //
                 var productModel = Mapper.Map<List<ProductModel>>(productProcedures.GetAllProducts());
                 return productModel;
             }
         }
-
+        /*
+         * Get all filtered products from DB using stored procedures in ProductProcedures class
+         * para@string: will be "shelter" always in this case
+         * para@IEnumerable<FilterGroup>: filter group object (converted from json) that includes all checked and unchecked filters
+         * ret@ IEnumerable<ProductModel>: all filtered products as list of IEnumerable objects
+         */
         public IEnumerable<ProductModel> GetProductsByFilter(string category, IEnumerable<FilterGroup> filterGroup)
         {
             if (category == "shelter")
@@ -63,7 +69,6 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
                     var productProcedures = new ProductProcedures(dbConnection);
                     var entities = productProcedures.GetFilteredProducts(filterGroup.GetAsParameterArray());
                     var productModel = Mapper.Map<List<ProductModel>>(entities);
-                    //IEnumerable<Product> filteredProducts = new IEnumerable<Product>(entities);
                     return productModel;
                 }
             }

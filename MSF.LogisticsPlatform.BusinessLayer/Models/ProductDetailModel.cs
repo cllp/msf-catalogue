@@ -5,7 +5,10 @@ using System.Text;
 
 namespace MSF.LogisticsPlatform.BusinessLayer.Models
 {
-
+    /*
+     * Product Detail Model with all product details information.
+     * The views in DB is used to gather all attributes from mutiple tables into a single modle
+     */
     public class ProductDetailModel
     {
         public int ProductID { get; set; }
@@ -14,7 +17,6 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Models
         public string EstimatedSetupTime { get; set; }
         public float PeopleRequired { get; set; }
         public float LifeSpan { get; set; }
-        //public string ProductPicture { get; set; }
         public int TrustWorthinessRating { get; set; }
         public int ModularityRating { get; set; }
         public int BuildingPerformenceRating { get; set; }
@@ -68,11 +70,6 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Models
         public int FB_QualityOfService { get; set; }
         public int FB_Pricing { get; set; }
         public string ProductPicture { get; set; }
-        public List<ProductFile> productFiles { get; set; }
-        
-        
-
-
-
+        public List<ProductFile> productFiles { get; set; }//Link to ProductFile table.
     }
 }

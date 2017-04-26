@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace MSF.LogisticsPlatform.API.Controllers
 {
-    // This controller is used for the filters layout.
-    // The layout is hardcoded and will be sent to the front-end to load fitlers pannel on the product page
+    // Filter controller to be used for the filters layout.
+    // This layout is hardcoded and will be sent to the front-end to load fitlers pannel on the product page
     [Produces("application/json")]
     [Route("api/Filter")] 
     public class FilterController : Controller

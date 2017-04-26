@@ -26,21 +26,23 @@ namespace MSF.LogisticsPlatform.API.Controllers
         public IActionResult GetAll()
         {
             var result = _ServiceFactory.GetProductService().GetAll();
-            var formatedResult = JsonConvert.SerializeObject(result, Formatting.Indented);// put the json object in 
+            var formatedResult = JsonConvert.SerializeObject(result, Formatting.Indented);//Change the json format to a proper one.
             return Ok(formatedResult);
         }
         
+        //Call product services to return one specific product by id.
         // GET: api/product/id
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             var result = _ServiceFactory.GetProductService().Get(id);
-            var formatedResult = JsonConvert.SerializeObject(result, Formatting.Indented);
+            var formatedResult = JsonConvert.SerializeObject(result, Formatting.Indented);//Change the json format to a proper one.
             return Ok(formatedResult);
         }
 
 
-        // Get: api/product/shelter/filterJson
+        // The {productCategory} must be specified, and in this case it is "shelter"
+        // Post: api/product/shelter/filterJson, the body of 'filterJson' is json object with all checked and unchecked filters.
         [Route("{productCategory}/filterJson")]
         [HttpPost]
         public IActionResult GetFilteredProducts(string productCategory, [FromBody]List<FilterGroup> filterJson)
