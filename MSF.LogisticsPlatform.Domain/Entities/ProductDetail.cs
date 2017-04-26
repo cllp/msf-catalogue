@@ -4,8 +4,9 @@ using System.Text;
 
 namespace MSF.LogisticsPlatform.Domain.Entities
 {
+    //ProductDetail Entity from multiple tables using stored proecdure
     public class ProductDetail
-    {
+    { 
         public int ProductID { get; set; }
         public string ProductName { get; set; }
         public int OverallRating { get; set; }

@@ -8,6 +8,10 @@ using System.Linq;
 
 namespace MSF.LogisticsPlatform.Domain.Database
 {
+    /*
+     * This class is responsible for getting all products, product by id and filters 
+     * by using stored procedures.
+     */
     public class ProductProcedures : IProductProcedures
     {
         private readonly IDbConnection _dbConnection;
@@ -17,11 +21,13 @@ namespace MSF.LogisticsPlatform.Domain.Database
             _dbConnection = dbConnection;
         }
 
+        // Getting all the products as IEnumerable(read only) from DB by using stored Procedure
         public IEnumerable<Product> GetAllProducts()
         {
             IEnumerable<Product> productList = SqlMapper.Query<Product>(_dbConnection, "dbo.GetFilteredProductList", commandType: CommandType.StoredProcedure);
             return productList;
         }
+
 
         public IEnumerable<ProductDetail> GetById(int id)
         {
@@ -45,8 +51,7 @@ namespace MSF.LogisticsPlatform.Domain.Database
 
             /*using (var multi = _dbConnection.QueryMultiple(sqlQuery, new { id = id }))
             {
-
-                var productDetails = multi.Read<ProductDetail>().SingleOrDefault();
+                var products = multi.Read<Product>().SingleOrDefault();
                 var imageFile = multi.Read<ProductFile>().ToList();
 
 
@@ -63,6 +68,11 @@ namespace MSF.LogisticsPlatform.Domain.Database
 
         }
 
+        /*
+         * Getting filtered products
+         * para@ string:stored procedure parameters
+         * ret@ IEnumerable<Product>:read only productList
+         */
         public IEnumerable<Product> GetFilteredProducts(string parameterAsArray)
         {
             StringBuilder query = new StringBuilder();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MSF.LogisticsPlatform.Domain.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -9,6 +10,7 @@ namespace MSF.LogisticsPlatform.Domain.Infrastructure
     public class DBConnectionFactory:IDBConnectionFactory,IDisposable
     {
         //To connent Azure SQL server just change the conn. String
+        //For local DB connection change the connectionString from Sql Server Object Explorer in VS.
 
         private readonly string connectionString = @"Server=tcp:twb3server.database.windows.net,1433;Initial Catalog = TWB3; Persist Security Info=False;User ID =  MATS.WEIDMAR ; Password= HackademyRulezOk!; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout = 30";
 
