@@ -4,13 +4,14 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace MSF.LogisticsPlatform.Domain.Infrastucture
+namespace MSF.LogisticsPlatform.Domain.Infrastructure
 {
     public class DBConnectionFactory:IDBConnectionFactory,IDisposable
     {
         //To connent Azure SQL server just change the conn. String
 
-        private readonly string connectionString = @"Data Source=JAYWAY-PC;Initial Catalog=MIC_Data;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        private readonly string connectionString = @"Server=tcp:twb3server.database.windows.net,1433;Initial Catalog = TWB3; Persist Security Info=False;User ID =  MATS.WEIDMAR ; Password= HackademyRulezOk!; MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout = 30";
+
 
         public IDbConnection Connection
         {

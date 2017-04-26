@@ -23,30 +23,43 @@ namespace MSF.LogisticsPlatform.Domain.Database
             return productList;
         }
 
-        public Product GetById(int id)
+        public IEnumerable<ProductDetail> GetById(int id)
         {
 
 
-            var sqlQuery = @" 
+            /*var sqlQuery = @" 
                 select  * FROM dbo.vProductData Where vProductData.ProductID =@id
 
-                select  ProductID, ProductFileName, FDescription from ProductFile where ProductID =@id ";
+                select  ProductID, ProductFileName, FDescription from ProductFile where ProductID =@id ";*/
 
-           using (var multi = _dbConnection.QueryMultiple(sqlQuery, new { id = id }))
+            IEnumerable<ProductDetail> productDetailList = SqlMapper.Query<ProductDetail>(_dbConnection, "SELECT * FROM dbo.vProductData Where ProductID =" + id);
+            IEnumerable<ProductFile> productFileList = SqlMapper.Query<ProductFile>(_dbConnection, "Exec dbo.GetProductPictureList " + id, commandType: CommandType.Text);
+
+            IEnumerable<ProductDetail> productDetail = new List<ProductDetail>();
+            productDetail = productDetailList;
+
+            foreach (var productFile in productFileList)
             {
-
-                var products = multi.Read<Product>().SingleOrDefault();
-                var imageFile = multi.Read<ProductFile>().ToList();
-
-                if (products != null && imageFile != null)
-                {
-                    
-                    products.imageFile.AddRange(imageFile);
-
-                }
-                return products;
+                productDetail.ElementAt(0).imageFile.Add(productFile);
             }
 
+            /*using (var multi = _dbConnection.QueryMultiple(sqlQuery, new { id = id }))
+            {
+
+                var productDetails = multi.Read<ProductDetail>().SingleOrDefault();
+                var imageFile = multi.Read<ProductFile>().ToList();
+
+
+
+                if (productDetails != null && imageFile != null)
+                {
+
+                    productDetails.imageFile.AddRange(imageFile);
+
+                }
+                return productDetails;
+            }*/
+            return productDetail;
 
         }
 

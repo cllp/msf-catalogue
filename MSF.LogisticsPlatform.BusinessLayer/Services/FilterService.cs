@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using MSF.LogisticsPlatform.BusinessLayer.Models;
-using MSF.LogisticsPlatform.Domain.Infrastucture;
+using MSF.LogisticsPlatform.Domain.Infrastructure;
 using static MSF.LogisticsPlatform.BusinessLayer.Models.FilterGroup;
 
 namespace MSF.LogisticsPlatform.BusinessLayer.Services

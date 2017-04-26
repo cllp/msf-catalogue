@@ -42,8 +42,20 @@ namespace MSF.LogisticsPlatform.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+
+            //app.UseCors(CorsOptions.AllowAll);
+
+            app.UseIdentityServerAuthentication(new IdentityServerAuthenticationOptions
+            {
+                Authority = "https://localhost:5000",
+                
+                RequireHttpsMetadata = false,
+
+                ApiName = "api1"
+            });
 
             if (env.IsDevelopment())
             {

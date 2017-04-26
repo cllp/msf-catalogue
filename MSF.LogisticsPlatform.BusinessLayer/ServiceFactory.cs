@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using MSF.LogisticsPlatform.BusinessLayer.Services;
 using System.Data;
-using MSF.LogisticsPlatform.Domain.Infrastucture;
+using MSF.LogisticsPlatform.Domain.Infrastructure;
 
 namespace MSF.LogisticsPlatform.BusinessLayer
 {

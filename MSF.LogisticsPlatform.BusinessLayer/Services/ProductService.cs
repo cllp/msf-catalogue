@@ -4,7 +4,7 @@ using System.Text;
 using System.IO;
 using AutoMapper;
 using Dapper;
-using MSF.LogisticsPlatform.Domain.Infrastucture;
+using MSF.LogisticsPlatform.Domain.Infrastructure;
 using MSF.LogisticsPlatform.BusinessLayer.Models;
 using MSF.LogisticsPlatform.Domain.Database;
 using MSF.LogisticsPlatform.Domain.Entities;
@@ -21,7 +21,7 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
 
         }
 
-        public Product Get(int id)
+        public IEnumerable<ProductDetailModel> Get(int id)
         {
             // Get data to productDetails model
             using (var dbConnection = _dbConnectionFactory.Connection)
@@ -29,10 +29,12 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
                 
                 dbConnection.Open();
 
-                var productRepository = new ProductProcedures(dbConnection);
+                var productProcedure = new ProductProcedures(dbConnection);
 
-                Mapper.Initialize(cfg => cfg.CreateMap<Product, ProductDetailModel>());
-                return AutoMapper.Mapper.Map<Product>(productRepository.GetById(id));
+                var productModel = Mapper.Map<List<ProductDetailModel>>(productProcedure.GetById(id));
+
+                return productModel;
+
             }
         }
 

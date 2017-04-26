@@ -2450,7 +2450,7 @@
   },
   "libraries": {
     "Dapper/1.50.2": {
-      "sha512": "4sUecJaw/cXXq0nyM1qld+GcE+sKzEOEECotlbJN7hZRAY8c09sNWDY7MynUw0/W3hF+k9VPWu2RbEXGnJ8svA==",
+      "sha512": "31Ju5VGyNNc66OAsw+SCp1TWPBuyw8ZBdkMG5pSUPChZcy27s2GhVz5B9INP4f25mPqfiJ+mfeHy9JAJyyT+LQ==",
       "type": "package",
       "path": "dapper/1.50.2",
       "files": [
@@ -7476,7 +7476,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jayway\\.nuget\\packages\\": {}
+    "C:\\Users\\talent2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
