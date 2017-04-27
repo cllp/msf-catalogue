@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using MSF.LogisticsPlatform.BusinessLayer.Models;
-using MSF.LogisticsPlatform.Domain.Infrastucture;
+using MSF.LogisticsPlatform.Domain.Infrastructure;
 using static MSF.LogisticsPlatform.BusinessLayer.Models.FilterGroup;
 
 namespace MSF.LogisticsPlatform.BusinessLayer.Services
 {
     /*
      * This class include all filter layouts that are hardcoded.
-     * All filters are unchecked by default (isChecked=false).
+     * All filters are unchecked by default (isChecked = false).
      */
     public class FilterService : IFilterService
     {

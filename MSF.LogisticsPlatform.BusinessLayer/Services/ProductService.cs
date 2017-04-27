@@ -4,7 +4,7 @@ using System.Text;
 using System.IO;
 using AutoMapper;
 using Dapper;
-using MSF.LogisticsPlatform.Domain.Infrastucture;
+using MSF.LogisticsPlatform.Domain.Infrastructure;
 using MSF.LogisticsPlatform.BusinessLayer.Models;
 using MSF.LogisticsPlatform.Domain.Database;
 using MSF.LogisticsPlatform.Domain.Entities;
@@ -27,15 +27,21 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
         }
 
         //Retrieve one product by {id}
-        public Product Get(int id)
+        public IEnumerable<ProductDetailModel> Get(int id)
         {
             using (var dbConnection = _dbConnectionFactory.Connection)
             {                
                 dbConnection.Open();
                 var productRepository = new ProductProcedures(dbConnection);
-                // Initialize the mapper between Entities.Product and Model.ProductDetailModel models.
-                Mapper.Initialize(cfg => cfg.CreateMap<Product, ProductDetailModel>());
-                return AutoMapper.Mapper.Map<Product>(productRepository.GetById(id));
+
+                var productProcedure = new ProductProcedures(dbConnection);
+
+                // Use the mapper between Products in Domain layer and ProductDetailModel in Business layer.   
+                var product = productProcedure.GetById(id);
+                var productModel = Mapper.Map<List<ProductDetailModel>>(product);
+
+                return productModel;
+
             }
         }
 
@@ -45,10 +51,12 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Services
             using (var dbConnection = _dbConnectionFactory.Connection)
             {
                 dbConnection.Open();
-                var productProcedures = new ProductProcedures(dbConnection);              
-                //
-                var productModel = Mapper.Map<List<ProductModel>>(productProcedures.GetAllProducts());
-                return productModel;
+                var productProcedures = new ProductProcedures(dbConnection);
+                // Get all products
+                var products = productProcedures.GetAllProducts();
+                // Use the mapper between Products in Domain layer and ProductDetailModel in Business layer
+                var productModels = Mapper.Map<List<ProductModel>>(products);
+                return productModels;
             }
         }
         /*

@@ -7,13 +7,14 @@ using Microsoft.AspNetCore.Mvc;
 using MSF.LogisticsPlatform.BusinessLayer;
 using MSF.LogisticsPlatform.BusinessLayer.Models;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MSF.LogisticsPlatform.API.Controllers
 {
     //This controller is used to return all products, product by id and all filtered products.
     [Route("api/Product")]
     public class ProductController : Controller
-    {        
+    {
         IServiceFactory _ServiceFactory;//Reference to Service Factory Interface to access the factory and create product services.
         public ProductController(IServiceFactory serviceFactory)
         {
@@ -30,7 +31,7 @@ namespace MSF.LogisticsPlatform.API.Controllers
             return Ok(formatedResult);
         }
         
-        //Call product services to return one specific product by id.
+        //Call product services to return one specific product by id.        
         // GET: api/product/id
         [HttpGet("{id}")]
         public IActionResult Get(int id)
@@ -46,7 +47,7 @@ namespace MSF.LogisticsPlatform.API.Controllers
         [Route("{productCategory}/filterJson")]
         [HttpPost]
         public IActionResult GetFilteredProducts(string productCategory, [FromBody]List<FilterGroup> filterJson)
-        {            
+        {
             var result = _ServiceFactory.GetProductService().GetProductsByFilter(productCategory, filterJson);
             var formatedResult = JsonConvert.SerializeObject(result, Formatting.Indented);
             return Ok(formatedResult);

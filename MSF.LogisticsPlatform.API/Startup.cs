@@ -30,7 +30,18 @@ namespace MSF.LogisticsPlatform.API
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddMvc();
+            services.AddCors(options =>
+            {
+                //This defines a CROS policy called "default"
+                options.AddPolicy("default", policy =>
+                 {
+                     policy.WithOrigins("http://localhost:4200")
+                     .AllowAnyHeader()
+                     .AllowAnyMethod();
+                 });
+                
+            });
+            services.AddMvcCore();                
             services.AddTransient<IServiceFactory, ServiceFactory>();
 
             Mapper.Initialize(x =>
@@ -42,8 +53,20 @@ namespace MSF.LogisticsPlatform.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+            //This uses the policy "default"
+            app.UseCors("default");
+
+            app.UseIdentityServerAuthentication(new IdentityServerAuthenticationOptions
+            {
+                Authority = "https://localhost:5000",
+                
+                RequireHttpsMetadata = false,
+
+                ApiName = "api1"
+            });
 
             if (env.IsDevelopment())
             {

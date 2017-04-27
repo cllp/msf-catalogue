@@ -4,15 +4,20 @@ using System.Text;
 
 namespace MSF.LogisticsPlatform.Domain.Entities
 {
+    /* This is a Product Entitiy which will include info about the product 
+     * from multiple tables using Stored Procedure in DB.
+     * This entity is mapped to product model in Business layer.
+     */
     public class Product
     {
         public int ProductID { get; set; }
         public string ProductName { get; set; }
+        public string ProductPicture { get; set; }
         public int ProductRating { get; set; }
+
         public string EstimatedSetupTime { get; set; }
         public float PeopleRequired { get; set; }
         public float LifeSpan { get; set; }
-        //public string ProductPicture { get; set; }
         public int TrustWorthinessRating { get; set; }
         public int ModularityRating { get; set; }
         public int BuildingPerformenceRating { get; set; }
@@ -39,7 +44,6 @@ namespace MSF.LogisticsPlatform.Domain.Entities
         public int NaturalLight { get; set; }
         public int NaturalVentilation { get; set; }
         public int Cleanability { get; set; }
-
         public int TendencyToGetDirty { get; set; }
         public int RequiredTraining { get; set; }
         public int EaseDurationSafety { get; set; }
@@ -65,14 +69,12 @@ namespace MSF.LogisticsPlatform.Domain.Entities
         public int FB_Mobility { get; set; }
         public int FB_QualityOfService { get; set; }
         public int FB_Pricing { get; set; }
-        
-        
+
+        //Getting the product image from productfile
         public List<ProductFile> imageFile { get; set; }
         public Product()
         {
-
             this.imageFile = new List<ProductFile>();
-
         }
     }
 }

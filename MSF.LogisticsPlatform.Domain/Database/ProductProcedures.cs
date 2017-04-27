@@ -8,6 +8,10 @@ using System.Linq;
 
 namespace MSF.LogisticsPlatform.Domain.Database
 {
+    /*
+     * This class is responsible for getting all products, product by id and filters 
+     * by using stored procedures.
+     */C:\Dev\msf-catalogue\MSF.LogisticsPlatform.Domain\Database\ProductProcedures.cs
     public class ProductProcedures : IProductProcedures
     {
         private readonly IDbConnection _dbConnection;
@@ -17,43 +21,42 @@ namespace MSF.LogisticsPlatform.Domain.Database
             _dbConnection = dbConnection;
         }
 
+        // Getting all the products as IEnumerable(read only) from DB by using stored Procedure
         public IEnumerable<Product> GetAllProducts()
         {
             IEnumerable<Product> productList = SqlMapper.Query<Product>(_dbConnection, "dbo.GetFilteredProductList", commandType: CommandType.StoredProcedure);
             return productList;
         }
 
-        public Product GetById(int id)
+        /*
+         * Getting one specific product by {id}
+         * para@ int:product id
+         * ret@ IEnumerable<Product>:read only product as IEnumerable
+         */
+        public IEnumerable<ProductDetail> GetById(int id)
         {
+            //Retrieve the data of the product
+            IEnumerable<ProductDetail> productDetailList = SqlMapper.Query<ProductDetail>(_dbConnection, "SELECT * FROM dbo.vProductData Where ProductID =" + id);
+            //Retrieve the image of the product using stored procedure
+            IEnumerable<ProductFile> productFileList = SqlMapper.Query<ProductFile>(_dbConnection, "Exec dbo.GetProductPictureList " + id, commandType: CommandType.Text);
 
-
-            var sqlQuery = @" 
-                select  * FROM dbo.vProductData Where vProductData.ProductID =@id
-
-                select  ProductID, ProductFileName, FDescription from ProductFile where ProductID =@id ";
-
-           using (var multi = _dbConnection.QueryMultiple(sqlQuery, new { id = id }))
+            //Get the image of the product from vProductData table and attach it to the product
+            foreach (var productFile in productFileList)
             {
-
-                var products = multi.Read<Product>().SingleOrDefault();
-                var imageFile = multi.Read<ProductFile>().ToList();
-
-                if (products != null && imageFile != null)
-                {
-                    
-                    products.imageFile.AddRange(imageFile);
-
-                }
-                return products;
+                productDetailList.ElementAt(0).imageFile.Add(productFile);
             }
-
-
+            return productDetailList;
         }
 
+        /*
+         * Getting filtered products
+         * para@ string:stored procedure parameters
+         * ret@ IEnumerable<Product>:read only productList
+         */
         public IEnumerable<Product> GetFilteredProducts(string parameterAsArray)
         {
             StringBuilder query = new StringBuilder();
-            query.Append("Exec dbo.GetFilteredProductList ");
+            query.Append("Exec dbo.GetFilteredProductList ");//append the stored procedure for filtered products
             query.Append(parameterAsArray);
 
             IEnumerable<Product> productList = SqlMapper.Query<Product>(_dbConnection, query.ToString());

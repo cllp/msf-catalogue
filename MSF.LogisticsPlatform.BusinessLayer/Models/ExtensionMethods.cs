@@ -12,6 +12,7 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Models
     {
         public static string GetAsParameterArray(this IEnumerable<FilterGroup> filter)
         {
+            //Creating a string with the required paramter to be passed to the stored procedure.
             StringBuilder result = new StringBuilder();
             foreach (var filterGroup in filter)
             {
@@ -21,7 +22,7 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Models
                     result.Append("=");
                     if (filterItem.IsChecked)
                     {
-                        result.Append("1");
+                        result.Append("1");//if that filter is checked then append "1" to the string, or "0" otherwise
                     }
                     else
                     {
@@ -30,7 +31,7 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Models
                     result.Append(",");
                 }
             }
-            return result.ToString().TrimEnd(',');
+            return result.ToString().TrimEnd(',');//remove last "," from the string
         }
     }
 }

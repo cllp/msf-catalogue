@@ -4,6 +4,7 @@ using System.Text;
 
 namespace MSF.LogisticsPlatform.Domain.Entities
 {
+    //ProductDetail Entity which include attributes from multiple tables
     public class ProductDetail
     {
         public int ProductID { get; set; }
@@ -12,10 +13,12 @@ namespace MSF.LogisticsPlatform.Domain.Entities
         public string EstimatedSetupTime { get; set; }
         public float PeopleRequired { get; set; }
         public float LifeSpan { get; set; }
+
         public int TrustWorthinessRating { get; set; }
         public int ModularityRating { get; set; }
         public int BuildingPerformenceRating { get; set; }
         public int SuplyRating { get; set; }
+
         public string SupplierName { get; set; }
         public string Location { get; set; }
         public string ConctactPersonInfo { get; set; }
@@ -27,10 +30,10 @@ namespace MSF.LogisticsPlatform.Domain.Entities
         public string Shape { get; set; }
         public string Dimensions { get; set; }
         public string CoverSurface { get; set; }
+
         public int Stability { get; set; }
         public int TendencyToAging { get; set; }
         public string LifeSpanForMedicalUse { get; set; }
-        public string ProductPicture { get; set; }
         public string MaintenancePlan { get; set; }
         public int Modularity { get; set; }
         public int Cutomization { get; set; }
@@ -39,6 +42,7 @@ namespace MSF.LogisticsPlatform.Domain.Entities
         public int NaturalLight { get; set; }
         public int NaturalVentilation { get; set; }
         public int Cleanability { get; set; }
+
         public int TendencyToGetDirty { get; set; }
         public int RequiredTraining { get; set; }
         public int EaseDurationSafety { get; set; }
@@ -64,5 +68,12 @@ namespace MSF.LogisticsPlatform.Domain.Entities
         public int FB_Mobility { get; set; }
         public int FB_QualityOfService { get; set; }
         public int FB_Pricing { get; set; }
+
+        // Link to the ProductFile table to get the product image
+        public List<ProductFile> imageFile { get; set; }
+        public ProductDetail()
+        {
+            this.imageFile = new List<ProductFile>();
+        }
     }
 }
