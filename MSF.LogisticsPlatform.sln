@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSF.LogisticsPlatform.Busin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSF.LogisticsPlatform.UnitTesting", "MSF.LogisticsPlatform.UnitTesting\MSF.LogisticsPlatform.UnitTesting.csproj", "{92281C13-9624-4B20-B7AF-00B65C215CE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSF.LogisticsPlatform.DummyStuff", "MSF.LogisticsPlatform.DummyStuff\MSF.LogisticsPlatform.DummyStuff.csproj", "{031B5736-D082-4B53-B972-1E5F28DB1960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSF.LogisticsPlatform.DummyStuffTesting", "MSF.LogisticsPlatform.DubbyStuffTesting\MSF.LogisticsPlatform.DummyStuffTesting.csproj", "{45825F14-E8B5-4E47-A647-988346B13A57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{92281C13-9624-4B20-B7AF-00B65C215CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92281C13-9624-4B20-B7AF-00B65C215CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92281C13-9624-4B20-B7AF-00B65C215CE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{031B5736-D082-4B53-B972-1E5F28DB1960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{031B5736-D082-4B53-B972-1E5F28DB1960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{031B5736-D082-4B53-B972-1E5F28DB1960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{031B5736-D082-4B53-B972-1E5F28DB1960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45825F14-E8B5-4E47-A647-988346B13A57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45825F14-E8B5-4E47-A647-988346B13A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45825F14-E8B5-4E47-A647-988346B13A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45825F14-E8B5-4E47-A647-988346B13A57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

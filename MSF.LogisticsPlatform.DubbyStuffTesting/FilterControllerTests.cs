@@ -1,12 +1,9 @@
 ﻿using System.Collections.Generic;
 using Xunit;
-using MSF.LogisticsPlatform.API.Controllers;
-using MSF.LogisticsPlatform.BusinessLayer;
-using MSF.LogisticsPlatform.BusinessLayer.Services;
-using MSF.LogisticsPlatform.BusinessLayer.Models;
+using MSF.LogisticsPlatform.DummyStuff;
 using FakeItEasy;
 
-namespace MSF.LogisticsPlatform.DummyStuffTesting
+namespace MSF.LogisticsPlatform.UnitTesting.MSF.LogisticsPlatform.API.Controllers
 {
 
     public class FilterControllerTests
