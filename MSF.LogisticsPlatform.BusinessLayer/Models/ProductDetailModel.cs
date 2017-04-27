@@ -75,5 +75,7 @@ namespace MSF.LogisticsPlatform.BusinessLayer.Models
 
         //Link to fetch the image from the ProductFile table.
         public List<ProductFile> imageFile { get; set; }
+
+        public List<Domain.Entities.Attribute> comments { get; set; }
     }
 }

@@ -69,11 +69,14 @@ namespace MSF.LogisticsPlatform.Domain.Entities
         public int FB_QualityOfService { get; set; }
         public int FB_Pricing { get; set; }
 
+        public List<Attribute> comments { get; set; }
+
         // Link to the ProductFile table to get the product image
         public List<ProductFile> imageFile { get; set; }
         public ProductDetail()
         {
             this.imageFile = new List<ProductFile>();
+            this.comments = new List<Attribute>();
         }
     }
 }

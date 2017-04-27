@@ -36,16 +36,22 @@ namespace MSF.LogisticsPlatform.Domain.Database
         public IEnumerable<ProductDetail> GetById(int id)
         {
             //Retrieve the data of the product
-            IEnumerable<ProductDetail> productDetailList = SqlMapper.Query<ProductDetail>(_dbConnection, "SELECT * FROM dbo.vProductData Where ProductID =" + id);
+            IEnumerable<ProductDetail> productDetail = SqlMapper.Query<ProductDetail>(_dbConnection, "SELECT * FROM dbo.vProductData Where ProductID =" + id);
             //Retrieve the image of the product using stored procedure
             IEnumerable<ProductFile> productFileList = SqlMapper.Query<ProductFile>(_dbConnection, "Exec dbo.GetProductPictureList " + id, commandType: CommandType.Text);
-
+            //
+            IEnumerable<Entities.Attribute> productComments = SqlMapper.Query<Entities.Attribute>(_dbConnection, "Exec dbo.GetFeedBackComment " + id, commandType: CommandType.Text);
+            
             //Get the image of the product from vProductData table and attach it to the product
             foreach (var productFile in productFileList)
             {
-                productDetailList.ElementAt(0).imageFile.Add(productFile);
+                productDetail.ElementAt(0).imageFile.Add(productFile);               
             }
-            return productDetailList;
+            foreach (var productComment in productComments)
+            {
+                productDetail.ElementAt(0).comments.Add(productComment);
+            }
+            return productDetail;
         }
 
         /*
