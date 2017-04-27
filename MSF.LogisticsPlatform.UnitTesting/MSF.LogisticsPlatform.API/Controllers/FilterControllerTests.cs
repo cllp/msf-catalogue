@@ -6,7 +6,7 @@ using MSF.LogisticsPlatform.BusinessLayer.Services;
 using MSF.LogisticsPlatform.BusinessLayer.Models;
 using FakeItEasy;
 
-namespace MSF.LogisticsPlatform.DummyStuffTesting
+namespace MSF.LogisticsPlatform.UnitTesting.MSF.LogisticsPlatform.API.Controllers
 {
 
     public class FilterControllerTests

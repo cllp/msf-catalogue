@@ -2,10 +2,12 @@
 using Xunit;
 using MSF.LogisticsPlatform.DummyStuff;
 using FakeItEasy;
+using ApprovalTests;
+using ApprovalTests.Reporters;
 
-namespace MSF.LogisticsPlatform.UnitTesting.MSF.LogisticsPlatform.API.Controllers
+namespace MSF.LogisticsPlatform.DummyStuffTesting
 {
-
+    [UseReporter(typeof(DiffReporter))]
     public class FilterControllerTests
     {
         [Fact]
@@ -32,7 +34,8 @@ namespace MSF.LogisticsPlatform.UnitTesting.MSF.LogisticsPlatform.API.Controller
 
             var requestResult = sut.GetAll("random category");
 
-            Assert.Equal("", requestResult.ToString());
+            Approvals.Verify(requestResult.ToString());
+            //Assert.Equal("", requestResult.ToString());
         }
     }
 }

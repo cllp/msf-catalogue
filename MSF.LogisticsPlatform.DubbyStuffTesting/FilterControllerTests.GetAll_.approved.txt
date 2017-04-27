@@ -1,0 +1,17 @@
+﻿[
+  {
+    "FilterGroupDescription": "Description 1",
+    "FilterItemsGroup": [
+      {
+        "Filter": "Filter 1",
+        "FilterCriteria": "Filter Criteria 1",
+        "IsChecked": false
+      },
+      {
+        "Filter": "Filter 2",
+        "FilterCriteria": "Filter Criteria 2",
+        "IsChecked": true
+      }
+    ]
+  }
+]
