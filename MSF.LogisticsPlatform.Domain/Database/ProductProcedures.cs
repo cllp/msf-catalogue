@@ -11,7 +11,7 @@ namespace MSF.LogisticsPlatform.Domain.Database
     /*
      * This class is responsible for getting all products, product by id and filters 
      * by using stored procedures.
-     */C:\Dev\msf-catalogue\MSF.LogisticsPlatform.Domain\Database\ProductProcedures.cs
+     */
     public class ProductProcedures : IProductProcedures
     {
         private readonly IDbConnection _dbConnection;
