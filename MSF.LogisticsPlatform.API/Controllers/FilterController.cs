@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MSF.LogisticsPlatform.BusinessLayer;
 using Newtonsoft.Json;
 using System;
@@ -12,6 +13,7 @@ namespace MSF.LogisticsPlatform.API.Controllers
     // This layout is hardcoded and will be sent to the front-end to load fitlers pannel on the product page
     [Produces("application/json")]
     [Route("api/Filter")] 
+    [Authorize]
     public class FilterController : Controller
     {
         IServiceFactory _ServiceFactory;//Reference to Service Factory Interface to access the factory and create filter services.

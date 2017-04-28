@@ -13,6 +13,8 @@ namespace MSF.LogisticsPlatform.API.Controllers
 {
     //This controller is used to return all products, product by id and all filtered products.
     [Route("api/Product")]
+    [Authorize]
+
     public class ProductController : Controller
     {
         IServiceFactory _ServiceFactory;//Reference to Service Factory Interface to access the factory and create product services.

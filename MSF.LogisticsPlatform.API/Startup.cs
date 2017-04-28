@@ -41,7 +41,11 @@ namespace MSF.LogisticsPlatform.API
                  });
                 
             });
-            services.AddMvcCore();                
+
+
+            services.AddMvcCore()
+                .AddAuthorization()
+                .AddJsonFormatters();                
             services.AddTransient<IServiceFactory, ServiceFactory>();
 
             Mapper.Initialize(x =>
@@ -61,12 +65,12 @@ namespace MSF.LogisticsPlatform.API
 
             app.UseIdentityServerAuthentication(new IdentityServerAuthenticationOptions
             {
-                Authority = "https://localhost:5000",
-                
+                Authority = "http://localhost:5000",
                 RequireHttpsMetadata = false,
-
-                ApiName = "api1"
+                ApiName = "api1",
             });
+
+
 
             if (env.IsDevelopment())
             {
